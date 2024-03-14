@@ -1,7 +1,7 @@
 
 function Home() {
   return (
-    <section className="m-auto max-w-7xl">
+    <section className="max-w-7xl m-3">
       <header className="mt-10 flex justify-left ml-2">
         <ul>
             <a href="" className="m-2 text-xl hover:scale-105">Log In</a>
