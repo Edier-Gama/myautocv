@@ -4,9 +4,9 @@ import { Input, FormLabel } from '@chakra-ui/react'
 function InputComponent(params: any) {
     const { labelText, placeholder } = params
     return (
-        <section className='m-3 max-w-96'>
-            <FormLabel className='font-sans text-xl m-3'>{labelText}</FormLabel>
-            <Input className='m-2 font-sans' placeholder={placeholder}/>
+        <section className='w-96 m-3'>
+            <FormLabel className='font-sans text-xl'>{labelText}</FormLabel>
+            <Input className='font-sans' placeholder={placeholder}/>
         </section>
     )
 }

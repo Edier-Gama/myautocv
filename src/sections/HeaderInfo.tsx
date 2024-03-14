@@ -2,13 +2,13 @@ import { InputComponent } from '@/components/Inputcomponents'
 
 function HeaderInfo() {
     return (
-        <section className='flex m-auto relative top-60 max-w-7xl flex-wrap'>
-            <h2 className='text-3xl text-left font-semibold ml-3'>Datos básicos</h2>
-            <div>
-              <InputComponent placeholder='Nombre' labelText='Nombre'/>
+        <section className='flex m-auto flex-col relative top-60 max-w-7xl flex-wrap'>
+            <p className='text-xl text-left font-semibold ml-3'>Datos básicos</p>
+            <div className='flex flex-wrap'>
+              <InputComponent placeholder='nombre' labelText='Nombre'/>
+              <InputComponent placeholder='email' labelText='Email'/>
+              <InputComponent placeholder='profesión' labelText='Profesión'/>
             </div>
-            <InputComponent placeholder='Nombre' labelText='Nombre'/>
-            <InputComponent placeholder='Nombre' labelText='Nombre'/>
         </section>
     )
 }

@@ -6,6 +6,9 @@
  --onest-font: 'Onest Variable';
  --nunito-font: 'Nunito Variable'
 }
+body {
+  margin: 20px;
+}
 
 
 h1, h2, h3, p {
@@ -15,9 +18,4 @@ h1, h2, h3, p {
 a, input, label {
   font-family: var(--nunito-font);
   font-size: 20px;
-}
-
-input {
-  width: 23rem;
-  background-color: blue;
 }
