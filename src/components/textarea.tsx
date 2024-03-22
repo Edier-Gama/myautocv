@@ -2,7 +2,7 @@ import { Textarea } from '@chakra-ui/react'
 import { useState } from 'react'
 
 function TextArea ({ placeholder }: any) {
-  const [resize, setResize] = useState('none')
+  const [resize, setResize] = useState()
   const [height, setHeight] = useState('200px')
   return (
         <section className="w-96 m-3">
