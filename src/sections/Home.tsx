@@ -1,8 +1,8 @@
-
-function Home() {
+/* eslint-disable react/react-in-jsx-scope */
+function Home (): any {
   return (
-    <section className="max-w-7xl m-3">
-      <header className="mt-10 flex justify-left ml-2">
+    <section className="max-w-7xl m-auto">
+      <header className="mt-10 flex m-auto ml-2">
         <ul>
             <a href="" className="m-2 text-xl hover:scale-105">Log In</a>
             <a href="" className="m-2 text-xl">Sign Up</a>
@@ -19,4 +19,4 @@ function Home() {
     </section>
   )
 }
-export {Home}
+export { Home }
