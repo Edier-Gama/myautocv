@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/react-in-jsx-scope */
 import { Textarea } from '@chakra-ui/react'
 import { useState } from 'react'
 
-function TextArea ({ placeholder }: any) {
+function TextArea ({ placeholder }: any): any {
   const [resize, setResize] = useState()
   const [height, setHeight] = useState('200px')
   return (

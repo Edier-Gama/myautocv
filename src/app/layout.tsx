@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import type { Metadata } from 'next'
 import { Providers } from './providers'
 import '@fontsource-variable/onest'
@@ -13,7 +14,7 @@ export default function RootLayout ({
   children
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>): any {
   return (
     <html lang="en">
       <Providers>{children}</Providers>

@@ -1,6 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Input, FormLabel } from '@chakra-ui/react'
 
-function InputComponent (params: any) {
+function InputComponent (params: any): any {
   const { labelText, placeholder } = params
   return (
         <section className='w-96 m-3'>
