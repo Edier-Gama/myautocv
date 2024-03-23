@@ -1,5 +1,4 @@
 /* eslint-disable no-tabs */
-/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/react-in-jsx-scope */
 
 import Datepicker from 'tailwind-datepicker-react'
@@ -13,16 +12,6 @@ const options = {
   clearBtnText: 'Clear',
   maxDate: new Date('2030-01-01'),
   minDate: new Date('1950-01-01'),
-  theme: {
-    background: 'bg-white',
-    todayBtn: '',
-    clearBtn: '',
-    icons: '',
-    text: 'Onest Variable',
-    input: '',
-    inputIcon: '',
-    selected: ''
-  },
   icons: {
     prev: () => <span>Back</span>,
     next: () => <span>Next</span>
@@ -33,12 +22,7 @@ const options = {
   weekDays: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
   inputNameProp: 'date',
   inputIdProp: 'date',
-  inputPlaceholderProp: 'Fecha de inicio',
-  inputDateFormatProp: {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  }
+  inputPlaceholderProp: 'Fecha de inicio'
 }
 
 const CalendarStartAndFinish = (): any => {
