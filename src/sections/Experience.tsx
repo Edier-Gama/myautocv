@@ -9,7 +9,10 @@ import { CalendarStartAndFinish } from '@/components/Calendarcomponents'
 import { TextArea } from '@/components/textareacomponents'
 
 function Experience (): any {
-  const addExperienceButton = document.querySelector('.add-experience-button')
+  let addExperienceButton: any
+  if (typeof window !== 'undefined') {
+    addExperienceButton = document.querySelector('.add-experience-button')
+  }
   const [hasExperience, setHasExperience] = useState(false)
   const router = useRouter()
 
