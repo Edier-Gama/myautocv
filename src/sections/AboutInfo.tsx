@@ -1,49 +1,34 @@
 import { TextArea } from '@/components/textareacomponents'
-import { InputLeftAddon, InputRightAddon, Input, InputGroup } from '@chakra-ui/react'
+import { InputAddon } from '@/components/InputAddoncomponents'
 import React from 'react'
 
 function AboutInfo (): any {
   return (
         <section className='flex m-auto relative top-60 max-w-7xl flex-wrap mt-10'>
             <div className="flex flex-col">
-                <p className='text-xl text-left font-semibold ml-3'>Describe tu perfil profesional</p>
-                <TextArea placeholder='+15 años de experiencia. Ingeniero de Software. Especializado en el desarrollo de aplicaciones web únicas de la Universidad Nacional de Colombia'/>
+                <TextArea
+                   classList='w-96 m-3'
+                   labelText='Describe tu perfil personal'
+                   placeholder='+15 años de experiencia. Ingeniero de Software. Especializado en ...'
+                />
             </div>
             <div className='flex flex-col'>
-                <p className='text-xl text-left font-semibold ml-3'>Describe tu perfil personal</p>
-                <TextArea placeholder='Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la programación con un Amstrad, tenía 10 años. Actualmente estoy liderando equipos de desarrollo en multinacionales.'/>
+                <TextArea
+                   classList='w-96 m-3'
+                   labelText='Describe tu perfil profesional'
+                   placeholder='Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la programación ...'
+                />
             </div>
             <div className="flex flex-col flex-wrap w-96">
-              <p className='text-xl text-left font-semibold ml-3'>Redes Sociales ( opcional )</p>
-              <div className='mt-3 m-3 w-96'>
-                <InputGroup size='sm' fontFamily={'Onest Variable'}>
-                    <InputLeftAddon height={'50px'} fontSize={'18px'}>
-                     @
-                    </InputLeftAddon>
-                    <Input placeholder='Tu username de Twitter / X' height={'50px'} fontSize={'18px'}/>
-                </InputGroup>
+              <p className='text-xl text-left font-semibold ml-3 mt-2'>Redes Sociales ( opcional )</p>
+              <div className='m-3 w-96'>
+                <InputAddon placeholder='Usuario de X' leftAddonHolder='@'/>
               </div>
               <div className='mt-3 m-3 w-96'>
-                <InputGroup size='sm' fontFamily={'Onest Variable'}>
-                    <InputLeftAddon height={'50px'} fontSize={'18px'}>
-                    https://
-                    </InputLeftAddon>
-                    <Input placeholder='Tu Linkedin' height={'50px'} fontSize={'18px'}/>
-                    <InputRightAddon height={'50px'} fontSize={'18px'}>
-                    .com
-                    </InputRightAddon>
-                </InputGroup>
+                <InputAddon placeholder='Linkedin' leftAddonHolder='https://'/>
               </div>
               <div className='mt-3 m-3 w-96'>
-                <InputGroup size='sm' fontFamily={'Onest Variable'}>
-                    <InputLeftAddon height={'50px'} fontSize={'18px'}>
-                    https://
-                    </InputLeftAddon>
-                    <Input placeholder='Tu Red Social Favorita' height={'50px'} fontSize={'18px'}/>
-                    <InputRightAddon height={'50px'} fontSize={'18px'}>
-                    .com
-                    </InputRightAddon>
-                </InputGroup>
+                <InputAddon placeholder='Cualquier red social' leftAddonHolder='https://'/>
               </div>
             </div>
         </section>

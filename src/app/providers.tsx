@@ -1,5 +1,5 @@
-/* eslint-disable react/react-in-jsx-scope */
 'use client'
+/* eslint-disable react/react-in-jsx-scope */
 
 import { ChakraProvider } from '@chakra-ui/react'
 

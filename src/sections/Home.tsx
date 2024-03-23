@@ -12,8 +12,9 @@ function Home (): any {
       </header>
       <main className="">
         <section className="flex flex-col relative top-20 p-3 max-w-4xl">
-            <h1 className="text-6xl font-semibold text-left md:text-left">Bienvenido a AutoCV Maker</h1>
-            <p className="mt-10 text-2xl text-left md:text-left max-w-3xl">Crea tu CV estilo minimalista en minutos y descárgalo en PDF totalmente gratis o linkea tu perfil para vista web</p>
+            <h1 className="text-6xl font-semibold text-left md:text-left">Open Source Project</h1>
+            <h1 className="text-6xl font-semibold text-left md:text-left">Free CV Maker</h1>
+            <p className="mt-10 text-2xl text-left md:text-left max-w-3xl">Crea tu CV estilo minimalista en minutos y descárgalo en PDF totalmente gratis o refiere tu perfil para vista web</p>
         </section>
       </main>
     </section>
