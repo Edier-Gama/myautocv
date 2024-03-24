@@ -8,12 +8,17 @@ import { Education } from '@/sections/Educationcomponents'
 
 export default function HomePage (): any {
   return (
-    <main>
+    <>
+    <section className='relative z-10'>
       <Home/>
+    </section>
+    <main className='relative'>
       <HeaderInfo/>
       <AboutInfo/>
       <Experience/>
       <Education/>
     </main>
+    
+    </>
   )
 }
