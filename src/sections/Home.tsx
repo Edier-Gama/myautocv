@@ -4,14 +4,14 @@ import { Button } from "@chakra-ui/react"
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">
-      <header className="mt-10 flex m-auto ml-2">
+      {/* <header className="mt-10 flex m-auto ml-2">
         <ul>
             <a href="" className="m-2 text-xl hover:scale-105">Log In</a>
             <a href="" className="m-2 text-xl">Sign Up</a>
             <a href="" className="m-2 text-xl">Home</a>
             <a href="" className="m-2 text-xl">About</a>
         </ul>
-      </header>
+      </header> */}
       <main className="">
         <section className="flex flex-col relative top-20 max-w-7xl flex-wrap m-3">
             <h1 className="text-5xl font-semibold text-center md:text-left">Open Source AutoCV</h1>
