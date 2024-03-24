@@ -26,7 +26,7 @@ const options = {
     prev: () => <span>Back</span>,
     next: () => <span>Next</span>
   },
-  datepickerClassNames: 'font-sans ml-10 mt-80 md:mt-5',
+  datepickerClassNames: 'font-sans ml-10 mt-60 md:mt-1',
   language: 'en',
   disabledDates: [],
   weekDays: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],

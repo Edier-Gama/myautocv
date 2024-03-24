@@ -1,9 +1,10 @@
 'use client'
 /* eslint-disable react/react-in-jsx-scope */
+import { Home } from '@/sections/Homecomponents'
+import { HeaderInfo } from '@/sections/HeaderInfocomponents'
 import { AboutInfo } from '@/sections/AboutInfocomponents'
 import { Experience } from '@/sections/Experiencecomponents'
-import { HeaderInfo } from '@/sections/HeaderInfocomponents'
-import { Home } from '@/sections/Homecomponents'
+import { Education } from '@/sections/Educationcomponents'
 
 export default function HomePage (): any {
   return (
@@ -12,6 +13,7 @@ export default function HomePage (): any {
       <HeaderInfo/>
       <AboutInfo/>
       <Experience/>
+      <Education/>
     </main>
   )
 }

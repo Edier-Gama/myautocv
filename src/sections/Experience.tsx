@@ -16,12 +16,13 @@ function Experience (): any {
   return (
     <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-experience-form'>
         <div>
-           <p className='text-xl text-left font-semibold ml-3'>Experiencia Laboral ( Opcional )</p>
+           <p className='text-xl text-left font-semibold ml-3'>Experiencia Laboral</p>
         </div>
     <div className='flex flex-wrap flex-col'>
         {!hasExperience && (
-        <div className='m-3 w-50 add-experience-button'>
+        <div className='m-3 w-60 add-experience-button'>
            <Button
+           className='w-80'
            colorScheme='blue'
            onClick={() => useExperienceAdd.toggleAddExperience(setHasExperience)}
            >Añadir experiencia laboral
