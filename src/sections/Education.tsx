@@ -22,7 +22,7 @@ function Education (): any {
         {!hasEducation && (
         <div className='m-3 w-60 add-education-button'>
            <Button
-           className='w-80'
+           className='w-96'
            colorScheme='blue'
            onClick={() => useEducationAdd.toggleAddEducation(setHasEducation)}
            >Añadir formación académica

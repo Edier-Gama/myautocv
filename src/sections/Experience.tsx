@@ -22,7 +22,7 @@ function Experience (): any {
         {!hasExperience && (
         <div className='m-3 w-60 add-experience-button'>
            <Button
-           className='w-80'
+           className='w-96'
            colorScheme='blue'
            onClick={() => useExperienceAdd.toggleAddExperience(setHasExperience)}
            >Añadir experiencia laboral
