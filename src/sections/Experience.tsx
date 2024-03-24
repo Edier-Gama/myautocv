@@ -2,31 +2,17 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { InputComponent } from '@/components/Inputcomponents'
-import { Button, FormLabel } from '@chakra-ui/react'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { CalendarStartAndFinish } from '@/components/Calendarcomponents'
 import { TextArea } from '@/components/textareacomponents'
+import { Button, FormLabel } from '@chakra-ui/react'
+import { useAddExperience, useCancelExperience } from '@/logic/useAddExperiencecomponents'
+
+import { useState } from 'react'
 
 function Experience (): any {
-  let addExperienceButton: any
-  if (typeof window !== 'undefined') {
-    addExperienceButton = document.querySelector('.add-experience-button')
-  }
+  const useExperienceAdd = useAddExperience()
+  const useExperienceCancel = useCancelExperience()
   const [hasExperience, setHasExperience] = useState(false)
-  const router = useRouter()
-
-  function toggleAddExperience (): void {
-    setHasExperience(!hasExperience)
-    router.push('/#add-experience-form')
-    addExperienceButton?.classList.add('inactive')
-  }
-
-  function cancelExperience (): void {
-    setHasExperience(false)
-    router.push('/#add-experience-form')
-    addExperienceButton?.classList.remove('inactive')
-  }
   return (
     <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-experience-form'>
         <div>
@@ -37,7 +23,7 @@ function Experience (): any {
         <div className='m-3 w-50 add-experience-button'>
            <Button
            colorScheme='blue'
-           onClick={toggleAddExperience}
+           onClick={() => useExperienceAdd.toggleAddExperience(setHasExperience)}
            >Añadir experiencia laboral
            </Button>
         </div>
@@ -57,7 +43,7 @@ function Experience (): any {
                       />
                       <TextArea
                          classList='m-3 w-96'
-                         placeholder='Fomenté buenas prácticas y mejoras en la cultura de rendimiento, Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día ...'
+                         placeholder='Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día ...'
                          labelText='Describe tus logros, metas, premios'
                       />
                       <div className='flex flex-col'>
@@ -78,7 +64,7 @@ function Experience (): any {
                   <Button
                       className='m-3'
                       colorScheme='blue'
-                      onClick={cancelExperience}
+                      onClick={() => useExperienceCancel.cancelExperience(setHasExperience)}
                       >Cancelar
                   </Button>
                   </div>

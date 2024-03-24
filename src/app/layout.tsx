@@ -20,7 +20,6 @@ export default function RootLayout ({
       <body>
         <Providers>{children}</Providers>
       </body>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/{{< current_version >}}/datepicker.min.js"></script>
     </html>
   )
 }
