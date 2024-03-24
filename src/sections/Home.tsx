@@ -20,7 +20,7 @@ function Home (): any {
               Refiere tu perfil para vista web o <b>Inicia sesión con Linkedin y haz tu CV de manera automática con 
               Inteligencia Artificial en segundos</b>  
             </p>
-            <div className="flex flex-wrap mt-10">
+            <div className="flex flex-wrap mt-10 justify-center md:justify-start">
               <Button className='w-96 mt-3 md:m-0' colorScheme='blue'>Auto CV con Linkedin</Button>
               <Button className='w-96 mt-3 md:ml-2 md:mt-0' colorScheme='blue'>Crear manualmnete</Button>
             </div>
