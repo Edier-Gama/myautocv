@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/react-in-jsx-scope */
+'use client'
+
 import { Textarea, FormLabel } from '@chakra-ui/react'
 import { useState } from 'react'
 
@@ -16,6 +16,7 @@ function TextArea (params: any): any {
              height={height}
              fontFamily={'Onest Variable'}
              className='font-sans text-xl'
+
           />
         </section>
   )

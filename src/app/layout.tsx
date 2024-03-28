@@ -6,8 +6,8 @@ import '@fontsource-variable/nunito'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Free CV Maker',
-  description: 'Crea tu CV minimalista totalmente con Free CV Maker'
+  title: 'Auto cv',
+  description: 'Crea tu CV minimalista totalmente con auto cv'
 }
 
 export default function RootLayout ({
@@ -17,6 +17,9 @@ export default function RootLayout ({
 }>): any {
   return (
     <html lang='en'>
+      <head>
+        
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>
