@@ -11,7 +11,7 @@ export default function SignInButton () {
     supabase.auth.signInWithOAuth({
       provider: 'linkedin_oidc',
       options: {
-        redirectTo: 'https://localhost:3000/auth/callback'
+        redirectTo: 'http://localhost:3000/auth/callback'
       }
     })
   }
