@@ -1,19 +1,36 @@
-import { NextResponse, type NextRequest } from 'next/server'
-import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
-export const dynamic = 'next/dynamic'
+import { NextResponse } from 'next/server'
+import { type CookieOptions, createServerClient } from '@supabase/ssr'
 
-export async function GET (request: NextRequest, response: NextResponse) {
-  const requestUrl = new URL(request.url)
-  const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+export async function GET (request: Request) {
+  const { searchParams, origin } = new URL(request.url)
+  const code = searchParams.get('code')
+  const next = searchParams.get('next') ?? '/'
 
-  const code = requestUrl.searchParams.get('code')
-  if (typeof code === 'string') {
-    console.log(code)
-    const supabase = createServerClient({ request, response }, SUPABASE_URL, SUPABASE_ANON_KEY, { cookies })
-    await supabase.auth.exchangeCodeForSession(code)
+  if (code != null) {
+    const cookieStore = cookies()
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          get (name: string) {
+            return cookieStore.get(name)?.value
+          },
+          set (name: string, value: string, options: CookieOptions) {
+            cookieStore.set({ name, value, ...options })
+          },
+          remove (name: string, options: CookieOptions) {
+            cookieStore.delete({ name, ...options })
+          }
+        }
+      }
+    )
+    const { error } = await supabase.auth.exchangeCodeForSession(code)
+    if (error == null) {
+      return NextResponse.redirect(`${origin}${next}`)
+    }
   }
 
-  return NextResponse.redirect('/')
+  return NextResponse.redirect(`${origin}/auth/auth-code-error`)
 }
