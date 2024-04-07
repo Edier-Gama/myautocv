@@ -1,0 +1,7 @@
+{
+    "name": "Auto cv",
+    "short_name": "auto cv",
+    "description": "Auto CV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn",
+    "background_color": "#d5ff00",
+    "display": "fullscreen"
+}

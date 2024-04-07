@@ -11,10 +11,7 @@ export default function SignInButton () {
   const SignInWithLinkedin = async () => {
     const supabase = createBrowserClient(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
     supabase.auth.signInWithOAuth({
-      provider: 'linkedin_oidc',
-      options: {
-        redirectTo: 'https://openautocv.vercel.app/auth/callback'
-      }
+      provider: 'linkedin_oidc'
     })
   }
   return (
