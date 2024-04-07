@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import SignInButton from '@/components/sign-in-button'
-import { ButtonWithLogo } from '@/components/button'
+import SignInButton from '@/components/SignInButton'
+import { ButtonWithLogo } from '@/components/Button'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 function Home (): any {
   return (

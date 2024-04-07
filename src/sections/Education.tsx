@@ -1,14 +1,14 @@
 'use client'
 /* eslint-disable react/react-in-jsx-scope */
 
-import { InputComponent } from '@/components/input'
-import { CalendarStartAndFinish } from '@/components/calendar'
-import { TextArea } from '@/components/textarea'
+import { InputComponent } from '@/components/Input'
+import { CalendarStartAndFinish } from '@/components/Calendar'
+import { TextArea } from '@/components/TextArea'
 import { Button, FormLabel } from '@chakra-ui/react'
 import { useAddEducation, useCancelEducation } from '@/logic/use-add-education'
 
 import { useState } from 'react'
-import { ButtonWithLogo } from '@/components/button'
+import { ButtonWithLogo } from '@/components/Button'
 
 function Education (): any {
   const useEducationAdd = useAddEducation()

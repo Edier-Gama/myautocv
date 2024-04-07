@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { InputComponent } from '@/components/input'
+import { InputComponent } from '@/components/Input'
 
 function HeaderInfo (): any {
   return (
