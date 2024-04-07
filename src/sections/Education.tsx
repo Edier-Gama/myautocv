@@ -3,7 +3,7 @@
 
 import { InputComponent } from '@/components/input'
 import { CalendarStartAndFinish } from '@/components/calendar'
-import { TextArea } from '@/components/TextArea'
+import { TextArea } from '@/components/textarea'
 import { Button, FormLabel } from '@chakra-ui/react'
 import { useAddEducation, useCancelEducation } from '@/logic/use-add-education'
 

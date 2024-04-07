@@ -1,7 +1,7 @@
 'use client'
 
 import { ButtonWithLogo } from './button'
-import { SignInWithLinkedin } from '@/utils/sign-in-with-linkedin'
+import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 
 export default function SignInButton () {
   return (
