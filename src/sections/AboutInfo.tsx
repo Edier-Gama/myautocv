@@ -1,4 +1,4 @@
-import { TextArea } from '@/components/Textarea'
+import { TextArea } from '@/components/textarea'
 import { InputAddon } from '@/components/InputAddon'
 import React from 'react'
 
