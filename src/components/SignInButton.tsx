@@ -13,7 +13,7 @@ export default function SignInButton () {
     supabase.auth.signInWithOAuth({
       provider: 'linkedin_oidc',
       options: {
-        redirectTo: 'http://localhost:3000/auth/callback'
+        redirectTo: 'https://openautocv.vercel.app/auth/callback'
       }
     })
   }
