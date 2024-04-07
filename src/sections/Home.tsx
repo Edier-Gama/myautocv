@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import SignInButton from '@/components/sign-in-buttoncomponents'
-import { ButtonWithLogo } from '@/components/buttoncomponents'
-import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedincomponents'
+import SignInButton from '@components/sign-in-button'
+import { ButtonWithLogo } from '@/components/button'
+import { SignInWithLinkedin } from '@/utils/sign-in-with-linkedin'
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">

@@ -18,7 +18,10 @@
       }
     ],
     "paths": {
-      "@/*components": ["./src/components"]
+      "baseUrl": "src/",
+      "@/utils/*": ["utils/supabase/*"],
+      "@components/*":["./components/*"],
+      "@sections/*":["./sections/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "*.js"],

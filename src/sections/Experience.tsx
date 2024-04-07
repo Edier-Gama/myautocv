@@ -1,12 +1,12 @@
 'use client'
 /* eslint-disable react/react-in-jsx-scope */
 
-import { InputComponent } from '@/components/inputcomponents'
-import { CalendarStartAndFinish } from '@/components/calendarcomponents'
-import { TextArea } from '@/components/textareacomponents'
+import { InputComponent } from '@/components/input'
+import { CalendarStartAndFinish } from '@/components/calendar'
+import { TextArea } from '@/components/textarea'
 import { Button, FormLabel } from '@chakra-ui/react'
-import { useAddExperience, useCancelExperience } from '@/logic/use-add-experiencecomponents'
-import { ButtonWithLogo } from '@/components/buttoncomponents'
+import { useAddExperience, useCancelExperience } from '@/logic/use-add-experience'
+import { ButtonWithLogo } from '@/components/button'
 import { useState } from 'react'
 
 function Experience (): any {

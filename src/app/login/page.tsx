@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import SignInButton from '@/components/sign-in-buttoncomponents'
+import SignInButton from '@/components/sign-in-button'
 
 export default function Login (): any {
   return (
