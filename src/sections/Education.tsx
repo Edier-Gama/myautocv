@@ -1,20 +1,21 @@
 'use client'
 /* eslint-disable react/react-in-jsx-scope */
 
-import { InputComponent } from '@/components/Inputcomponents'
-import { CalendarStartAndFinish } from '@/components/Calendarcomponents'
-import { TextArea } from '@/components/textareacomponents'
+import { InputComponent } from '@/components/input'
+import { CalendarStartAndFinish } from '@/components/calendar'
+import { TextArea } from '@/components/textarea'
 import { Button, FormLabel } from '@chakra-ui/react'
-import { useAddEducation, useCancelEducation } from '@/logic/useAddEducationcomponents'
+import { useAddEducation, useCancelEducation } from '@/logic/use-add-education'
 
 import { useState } from 'react'
-import { ButtonWithLogo } from '@/components/Buttoncomponents'
+import { ButtonWithLogo } from '@/components/button'
 
 function Education (): any {
   const useEducationAdd = useAddEducation()
   const useEducationCancel = useCancelEducation()
   const [hasEducation, setHasEducation] = useState(false)
   const toggleEducation = useEducationAdd.toggleAddEducation
+  const cancelEducation = useEducationCancel.cancelEducation
   return (
     <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-education-form'>
         <div>
@@ -53,17 +54,18 @@ function Education (): any {
                       </div>
                   </section>
                   <div className='flex flex-wrap'>
-                  <Button
-                      className='m-3'
-                      colorScheme='blue'
-                      >Añadir
-                  </Button>
-                  <Button
-                      className='m-3'
-                      colorScheme='blue'
-                      onClick={() => useEducationCancel.cancelEducation(setHasEducation)}
-                      >Cancelar
-                  </Button>
+                  <div>
+                      <ButtonWithLogo
+                         text='Añadir'
+                      />
+                    </div>
+                    <div>
+                      <ButtonWithLogo
+                         text='Cancelar'
+                         callback={cancelEducation}
+                         callBackData={setHasEducation}
+                      />
+                    </div>
                   </div>
                 </section>
             )

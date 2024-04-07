@@ -1,13 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import { Button } from '@chakra-ui/react'
-import SignInButton from '@/components/SignInButtoncomponents'
-import { ButtonWithLogo } from '@/components/Buttoncomponents'
-import { GithubLogo } from '@/consts/github-logocomponents'
+import SignInButton from '@/components/sign-in-button'
+import { ButtonWithLogo } from '@/components/button'
+import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">
-      <header className="mt-10 flex m-auto justify-end">
+      <header className="pc-navbar mt-10 flex m-auto justify-end md:none">
         <ul>
             <SignInButton/>
             <ButtonWithLogo
@@ -27,12 +26,15 @@ function Home (): any {
         </ul>
       </header>
       <main className="">
-        <section className="flex flex-col relative top-20 max-w-7xl flex-wrap m-3">
-            <h1 className="text-5xl font-semibold text-center md:text-left">Open Source AutoCV</h1>
+        <section className="m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10">
+            <h1 className="text-5xl font-semibold text-center md:text-left">My AutoCV Crea tu CV anti ATS en segundos</h1>
             <p className="mt-10 text-2xl text-center md:text-left max-w-3xl">
               Crea tu CV estilo minimalista en minutos y descárgalo en PDF gratis.
-              Refiere tu perfil para vista web o <b>Inicia sesión con Linkedin y haz tu CV de manera automática con
-              Inteligencia Artificial en segundos</b>
+              Refiere tu perfil para vista web o <a
+                className='. text-blue-700 text-2xl font-sans'
+                href='/login'>
+                Inicia sesión con LinkedIn
+              </a> y haz tu CV de manera automática con Inteligencia Artificial en segundos
             </p>
         </section>
       </main>
