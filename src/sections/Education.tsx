@@ -8,11 +8,13 @@ import { Button, FormLabel } from '@chakra-ui/react'
 import { useAddEducation, useCancelEducation } from '@/logic/useAddEducationcomponents'
 
 import { useState } from 'react'
+import { ButtonWithLogo } from '@/components/Buttoncomponents'
 
 function Education (): any {
   const useEducationAdd = useAddEducation()
   const useEducationCancel = useCancelEducation()
   const [hasEducation, setHasEducation] = useState(false)
+  const toggleEducation = useEducationAdd.toggleAddEducation
   return (
     <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-education-form'>
         <div>
@@ -21,12 +23,11 @@ function Education (): any {
     <div className='flex flex-wrap flex-col'>
         {!hasEducation && (
         <div className='m-3 w-60 add-education-button'>
-           <Button
-           className='w-96'
-           colorScheme='blue'
-           onClick={() => useEducationAdd.toggleAddEducation(setHasEducation)}
-           >Añadir formación académica
-           </Button>
+           <ButtonWithLogo
+              text='Añadir nueva educación'
+              callback={toggleEducation}
+              callBackData={setHasEducation}
+            />
         </div>
         )}
         {

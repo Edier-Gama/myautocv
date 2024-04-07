@@ -6,13 +6,16 @@ import { CalendarStartAndFinish } from '@/components/Calendarcomponents'
 import { TextArea } from '@/components/textareacomponents'
 import { Button, FormLabel } from '@chakra-ui/react'
 import { useAddExperience, useCancelExperience } from '@/logic/useAddExperiencecomponents'
-
+import { ButtonWithLogo } from '@/components/Buttoncomponents'
 import { useState } from 'react'
 
 function Experience (): any {
   const useExperienceAdd = useAddExperience()
   const useExperienceCancel = useCancelExperience()
   const [hasExperience, setHasExperience] = useState(false)
+  const toggleExperience = useExperienceAdd.toggleAddExperience
+  const cancelExperience = useExperienceCancel.cancelExperience
+
   return (
     <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-experience-form'>
         <div>
@@ -21,12 +24,11 @@ function Experience (): any {
     <div className='flex flex-wrap flex-col'>
         {!hasExperience && (
         <div className='m-3 w-60 add-experience-button'>
-           <Button
-           className='w-96'
-           colorScheme='blue'
-           onClick={() => useExperienceAdd.toggleAddExperience(setHasExperience)}
-           >Añadir experiencia laboral
-           </Button>
+          <ButtonWithLogo
+              text='Añadir nueva educación'
+              callback={toggleExperience}
+              callBackData={setHasExperience}
+            />
         </div>
         )}
         {
@@ -56,18 +58,19 @@ function Experience (): any {
                         <CalendarStartAndFinish/>
                       </div>
                   </section>
-                  <div className='flex flex-wrap'>
-                  <Button
-                      className='m-3'
-                      colorScheme='blue'
-                      >Añadir
-                  </Button>
-                  <Button
-                      className='m-3'
-                      colorScheme='blue'
-                      onClick={() => useExperienceCancel.cancelExperience(setHasExperience)}
-                      >Cancelar
-                  </Button>
+                  <div className='flex flex-wrap ml-3'>
+                    <div>
+                      <ButtonWithLogo
+                         text='Añadir'
+                      />
+                    </div>
+                    <div>
+                      <ButtonWithLogo
+                         text='Cancelar'
+                         callback={cancelExperience}
+                         callBackData={setHasExperience}
+                      />
+                    </div>
                   </div>
                 </section>
             )
