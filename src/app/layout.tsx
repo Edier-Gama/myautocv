@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: 'Auto CV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
   openGraph: {
     title: 'Auto CV - Crea CV en segundos con Inteligencia Artificial',
-    description: 'Auto CV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.'
+    description: 'Auto CV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
+    images: '/favicon.svg'
   }
 }
 
