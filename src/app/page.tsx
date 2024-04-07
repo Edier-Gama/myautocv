@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 'use client'
-import { Home } from '../sections/home'
-import { HeaderInfo } from '../sections/headerInfo'
-import { AboutInfo } from '../sections/aboutInfo'
-import { Experience } from '../sections/experience'
-import { Education } from '../sections/education'
+import { Home } from '@/sections/homecomponents'
+import { HeaderInfo } from '@/sections/headerInfocomponents'
+import { AboutInfo } from '@/sections/aboutInfocomponents'
+import { Experience } from '@/sections/experiencecomponents'
+import { Education } from '@/sections/educationcomponents'
 
 export default function HomePage () {
   return (
