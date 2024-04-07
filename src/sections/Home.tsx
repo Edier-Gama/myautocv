@@ -26,9 +26,9 @@ function Home (): any {
         </ul>
       </header>
       <main className="">
-        <section className="m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10">
-            <h1 className="text-5xl font-semibold text-center md:text-left">My AutoCV Crea tu CV anti ATS en segundos</h1>
-            <p className="mt-10 text-2xl text-center md:text-left max-w-3xl">
+        <section className="m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
+            <h1 className="text-5xl font-semibold text-center">Bienvenidos a My AutoCV <br/> Crea un CV anti ATS en segundos</h1>
+            <p className="mt-10 text-2xl text-center max-w-3xl">
               Crea tu CV estilo minimalista en minutos y descárgalo en PDF gratis.
               Refiere tu perfil para vista web o <a
                 className='. text-blue-700 text-2xl font-sans'
