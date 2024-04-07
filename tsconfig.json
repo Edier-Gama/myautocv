@@ -18,8 +18,8 @@
       }
     ],
     "paths": {
-      "baseUrl": "src/",
-      "@/utils/*": ["utils/supabase/*"],
+      "baseUrl": "./src",
+      "@utils/*": ["./utils/supabase/*"],
       "@components/*":["./components/*"],
       "@sections/*":["./sections/*"],
     }
