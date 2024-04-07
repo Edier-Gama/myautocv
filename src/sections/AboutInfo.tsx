@@ -1,5 +1,5 @@
 import { TextArea } from '@/components/textareacomponents'
-import { InputAddon } from '@/components/InputAddoncomponents'
+import { InputAddon } from '@/components/input-addoncomponents'
 import React from 'react'
 
 function AboutInfo (): any {
