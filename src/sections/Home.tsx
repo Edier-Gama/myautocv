@@ -4,12 +4,12 @@ import SignInButton from '@/components/SignInButton'
 import { ButtonWithLogo } from '@/components/Button'
 import Image from 'next/image'
 import cvImage from '../../public/cv_example.jpg'
+import { Button } from '@chakra-ui/react'
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">
       <header className="pc-navbar mt-10 flex m-auto justify-end md:none">
         <ul>
-            <SignInButton/>
             <ButtonWithLogo
               text={<a href='https://github.com/Edier-Gama/myautocv' className='text-sm'>Ver código fuente</a>}
               svg={<svg
@@ -27,8 +27,8 @@ function Home (): any {
         </ul>
       </header>
       <main className="">
-        <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
-          <div className='z-10 m-3'>
+        <section className="animate-in fade-in zoom-in duration-500 m-4 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
+          <div className='z-10 m-3 flex flex-col justify-center items-center'>
             <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-xl text-left max-w-4xl md:text-center md:text-2xl">
               Crea un CV manualmente y descárgalo gratis o <a
@@ -37,6 +37,14 @@ function Home (): any {
                   Inicia sesión con LinkedIn
               </a> y crea un CV de manera automática usando <b>Inteligencia Artificial en un segundo</b>
             </p>
+            <section className='flex flex-wrap mt-10'>
+              <div className=''>
+                <SignInButton/>
+              </div>
+              <div className='mt-3 md:mt-0'>
+                <Button color='white' colorScheme='blue' borderRadius='50px' className='font-sans text-sm w-96'>Crear CV manualmente</Button>
+              </div>
+            </section>
           </div>
           <div className='relative top-32 rounded-lg'>
            <h1 className="max-w-4xl text-3xl font-semibold text-center md:text-3xl">Con un diseño minimalista...</h1>

@@ -19,7 +19,8 @@ const config: Config = {
       }
     },
     fontFamily: {
-      sans: ['Onest Variable']
+      sans: ['Onest Variable'],
+      runda: ['Runda']
     }
   },
   plugins: [require('flowbite/plugin'), require('tailwindcss-animate')]
