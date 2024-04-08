@@ -17,6 +17,7 @@
     "@fontsource-variable/onest": "^5.0.3",
     "@supabase/ssr": "^0.1.0",
     "@supabase/supabase-js": "^2.40.0",
+    "@vercel/analytics": "^1.2.2",
     "flowbite": "^2.3.0",
     "flowbite-datepicker": "^1.2.6",
     "flowbite-react": "^0.7.5",

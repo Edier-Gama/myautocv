@@ -2,7 +2,8 @@
 
 import SignInButton from '@/components/SignInButton'
 import { ButtonWithLogo } from '@/components/Button'
-import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
+import Image from 'next/image'
+import cvImage from '../../public/cv_example.jpg'
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">
@@ -26,15 +27,20 @@ function Home (): any {
         </ul>
       </header>
       <main className="">
-        <section className="m-3 min-w-96 flex relative top-20 max-w-5xl flex-wrap mt-10 justify-start">
-            <h1 className="max-w-4xl text-5xl font-semibold text-left md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
-            <p className="mt-10 text-2xl text-left max-w-3xl">
+        <section className="m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
+          <div className='z-10'>
+            <h1 className="max-w-4xl text-5xl font-semibold text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
+            <p className="mt-10 text-2xl text-center max-w-3xl">
               Crea un CV manualmente con un estilo minimalista y descárgalo gratis o <a
                 className='. text-blue-700 text-2xl font-sans'
                 href='https://localhost:3001/auth/callback'>
                   Inicia sesión con LinkedIn
               </a> y haz tu CV de manera automática con Inteligencia Artificial en segundos
             </p>
+          </div>
+          <div className='relative . top-52'>
+           <img className='relative' src='/Ejemplo-1.png' alt='CV example' width={800}/>
+          </div>
         </section>
       </main>
     </section>

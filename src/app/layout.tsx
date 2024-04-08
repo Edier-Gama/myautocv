@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import type { Metadata } from 'next'
 import { Providers } from './providers'
+import { Analytics } from '@vercel/analytics/react'
 import '@fontsource-variable/onest'
 import '@fontsource-variable/nunito'
 import './globals.css'
@@ -50,6 +51,7 @@ export default function RootLayout ({
       </head>
       <body>
         <Providers>{children}</Providers>
+        <Analytics/>
       </body>
     </html>
   )

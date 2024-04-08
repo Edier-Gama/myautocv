@@ -4,7 +4,7 @@ import React from 'react'
 
 function AboutInfo (): any {
   return (
-        <section className='flex m-auto relative top-60 max-w-7xl flex-wrap mt-10'>
+        <section className='flex m-auto relative top-80 max-w-7xl flex-wrap mt-10'>
             <div className="flex flex-col">
                 <TextArea
                    classList='w-96 m-3'
