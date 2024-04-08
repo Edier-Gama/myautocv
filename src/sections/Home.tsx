@@ -41,10 +41,10 @@ function Home (): any {
             </p>
             </section>
             <section className='flex flex-wrap mt-10'>
-              <div className='m-3 md:mt-0 md:m-0'>
+              <div className='m-3'>
                 <SignInButton/>
               </div>
-              <div className='m-3 mt-2 md:mt-0 md:m-0'>
+              <div className='m-3 relative bottom-3'>
                 <Button color='white' colorScheme='blue' borderRadius='50px' className='font-sans text-sm w-96'>Crear CV manualmente</Button>
               </div>
             </section>
