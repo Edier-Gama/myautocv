@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Providers } from './providers'
 import { Analytics } from '@vercel/analytics/react'
 import '@fontsource-variable/onest'
-import '@fontsource-variable/nunito'
 import './globals.css'
 
 export const metadata: Metadata = {

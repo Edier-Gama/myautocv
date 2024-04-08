@@ -4,7 +4,7 @@ import { InputComponent } from '@/components/Input'
 function HeaderInfo (): any {
   return (
         <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap justify-center'>
-            <p className='text-xl text-left font-semibold ml-3'>Información básica</p>
+            <h1 className="text-4xl font-semibold m-3">Inicia manualmente</h1>
             <div className='flex flex-wrap'>
                 <InputComponent placeholder='nombre' labelText='Nombre'/>
                 <InputComponent placeholder='email' labelText='Email'/>

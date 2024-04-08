@@ -22,7 +22,6 @@ const config: Config = {
       sans: ['Onest Variable']
     }
   },
-  plugins: [require('flowbite/plugin')
-  ]
+  plugins: [require('flowbite/plugin'), require('tailwindcss-animate')]
 }
 export default config
