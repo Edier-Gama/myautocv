@@ -31,11 +31,11 @@ function Home (): any {
           <div className='z-10'>
             <h1 className="max-w-4xl text-5xl font-semibold text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-2xl text-center max-w-4xl">
-              Crea un CV manualmente con un estilo minimalista y descárgalo gratis o <a
+              Crea un CV manualmente y descárgalo gratis o <a
                 className='. text-blue-700 text-2xl font-sans'
                 href='https://localhost:3001/auth/callback'>
                   Inicia sesión con LinkedIn
-              </a> y haz tu CV de manera automática con Inteligencia Artificial en segundos
+              </a> y haz tu CV de manera automática con <b>Inteligencia Artificial en segundos</b>
             </p>
           </div>
           <div className='relative top-32 rounded-lg'>
