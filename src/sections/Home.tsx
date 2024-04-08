@@ -38,7 +38,7 @@ function Home (): any {
               </a> y haz tu CV de manera automática con Inteligencia Artificial en segundos
             </p>
           </div>
-          <div className='relative top-20 p-10 rounded-lg'>
+          <div className='relative top-20 rounded-lg'>
            <h1 className="max-w-4xl text-3xl font-semibold text-center md:text-3xl">Con un diseño minimalista...</h1>
            <img className='relative mt-5 rounded-lg' src='/cv.jpg' alt='CV example' width={800}/>
           </div>
