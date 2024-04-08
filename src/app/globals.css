@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Runda';
+  src: url('../../public/Runda.otf');
+}
+
 :root {
  --onest-font: 'Onest Variable';
- --nunito-font: 'Nunito Variable'
+ --nunito-font: 'Nunito Variable';
+ --runda: 'Runda'
 }
 body {
   margin: 20px;
@@ -16,11 +22,11 @@ body {
 }
 
 h1, h2, h3, p {
-  font-family: var(--onest-font);
+  font-family: var(--runda);
 }
 
 a, input, label {
-  font-family: var(--nunito-font);
+  font-family: var(--runda);
   font-size: 20px;
 }
 @media (max-width: 768px) {

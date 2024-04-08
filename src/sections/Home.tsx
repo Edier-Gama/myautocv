@@ -10,7 +10,7 @@ function Home (): any {
         <ul>
             <SignInButton/>
             <ButtonWithLogo
-              text='View repository'
+              text={<a href='https://github.com/Edier-Gama/myautocv' className='text-sm'>Ver código fuente</a>}
               svg={<svg
                 aria-hidden="true"
                 className="font-sans w-6 h-5 me-2 -ms-1"
@@ -26,14 +26,13 @@ function Home (): any {
         </ul>
       </header>
       <main className="">
-        <section className="m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
-            <h1 className="text-5xl font-semibold text-center">Bienvenidos a My AutoCV <br/> Crea un CV anti ATS en segundos</h1>
-            <p className="mt-10 text-2xl text-center max-w-3xl">
-              Crea tu CV estilo minimalista en minutos y descárgalo en PDF gratis.
-              Refiere tu perfil para vista web o <a
+        <section className="m-3 min-w-96 flex relative top-20 max-w-5xl flex-wrap mt-10 justify-start">
+            <h1 className="max-w-4xl text-5xl font-semibold text-left md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
+            <p className="mt-10 text-2xl text-left max-w-3xl">
+              Crea un CV manualmente con un estilo minimalista y descárgalo gratis o <a
                 className='. text-blue-700 text-2xl font-sans'
-                href='/login'>
-                Inicia sesión con LinkedIn
+                href='https://localhost:3001/auth/callback'>
+                  Inicia sesión con LinkedIn
               </a> y haz tu CV de manera automática con Inteligencia Artificial en segundos
             </p>
         </section>
