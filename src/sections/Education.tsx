@@ -53,13 +53,13 @@ function Education (): any {
                       </div>
                       </div>
                   </section>
-                  <div className='flex flex-wrap'>
-                  <div>
+                  <div className='flex flex-wrap ml-3'>
+                    <div className='m-1'>
                       <ButtonWithLogo
                          text='Añadir'
                       />
                     </div>
-                    <div>
+                    <div className='m-1'>
                       <ButtonWithLogo
                          text='Cancelar'
                          callback={cancelEducation}

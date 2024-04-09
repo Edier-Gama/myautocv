@@ -3,8 +3,8 @@ import { InputComponent } from '@/components/Input'
 
 function HeaderInfo (): any {
   return (
-        <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap justify-center'>
-            <h1 className="text-4xl font-semibold m-3">Inicia manualmente</h1>
+        <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap justify-center' id='cv-maker'>
+            <h1 className="text-4xl font-semibold m-3">Vamos a crear algo nuevo...</h1>
             <div className='flex flex-wrap'>
                 <InputComponent placeholder='nombre' labelText='Nombre'/>
                 <InputComponent placeholder='email' labelText='Email'/>

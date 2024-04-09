@@ -30,7 +30,7 @@ function Home (): any {
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
           <div className='z-10 flex flex-col justify-center items-center'>
 
-            <section className='m-4'>
+            <section className='ml-4 mr-2'>
             <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-xl text-left max-w-4xl md:text-center md:text-2xl">
               Crea un CV manualmente y descárgalo gratis o <a
@@ -40,20 +40,22 @@ function Home (): any {
               </a> y crea un CV de manera automática usando <b>Inteligencia Artificial en un segundo</b>
             </p>
             </section>
-            <section className='flex flex-wrap mt-10'>
-              <div className='m-3 md:m-0'>
+            <section className='flex flex-wrap mt-10 justify-center'>
+              <div className='m-2'>
                 <SignInButton/>
               </div>
-              <div className='m-3 relative bottom-3 md:bottom-0 md:m-0'>
-                <Button color='white' colorScheme='blue' borderRadius='50px' className='font-sans text-sm w-96'>Crear CV manualmente</Button>
-              </div>
+                <a
+                  href='#cv-maker'
+                  className='m-2 h-11 bg-blue-600 flex justify-center items-center rounded-xl w-96 text-sm text-white font-sans'>Crear CV manualmente
+                </a>
             </section>
 
           </div>
-          <div className='relative top-32 rounded-lg'>
+          {/* Pensando si añadirlo: */}
+          {/* <div className='relative top-32 rounded-lg'>
            <h1 className="max-w-4xl text-3xl font-semibold text-center md:text-3xl">Con un diseño minimalista...</h1>
            <img className='relative mt-5 rounded-lg' src='/cv.jpg' alt='CV example' width={800}/>
-          </div>
+          </div> */}
         </section>
       </main>
     </section>
