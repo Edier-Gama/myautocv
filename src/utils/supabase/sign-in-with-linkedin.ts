@@ -9,7 +9,7 @@ const SignInWithLinkedin = async () => {
   supabase.auth.signInWithOAuth({
     provider: 'linkedin_oidc',
     options: {
-      redirectTo: 'http://localhost:3000/auth/callback'
+      redirectTo: 'https://myautocv/auth/callback'
     }
   })
 }
