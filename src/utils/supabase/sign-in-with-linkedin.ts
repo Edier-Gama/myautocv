@@ -9,7 +9,7 @@ const SignInWithLinkedin = async () => {
   supabase.auth.signInWithOAuth({
     provider: 'linkedin_oidc',
     options: {
-      redirectTo: 'https://myautocv/auth/callback'
+      redirectTo: 'https://myautocv.vercel.app/auth/callback'
     }
   })
 }
