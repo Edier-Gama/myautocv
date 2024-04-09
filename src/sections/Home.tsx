@@ -30,7 +30,7 @@ function Home (): any {
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
           <div className='z-10 flex flex-col justify-center items-center'>
 
-            <section className='ml-4 mr-2'>
+            <section className='m-0'>
             <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-xl text-left max-w-4xl md:text-center md:text-2xl">
               Crea un CV manualmente y descárgalo gratis o <a
@@ -41,12 +41,12 @@ function Home (): any {
             </p>
             </section>
             <section className='flex flex-wrap mt-10 justify-center'>
-              <div className='m-2'>
+              <div className=''>
                 <SignInButton/>
               </div>
                 <a
                   href='#cv-maker'
-                  className='m-2 h-11 bg-blue-600 flex justify-center items-center rounded-xl w-96 text-sm text-white font-sans'>Crear CV manualmente
+                  className='mt-3 md:ml-3 md:mt-0 h-11 bg-blue-600 flex justify-center items-center rounded-xl w-96 text-sm text-white font-sans'>Crear CV manualmente
                 </a>
             </section>
 

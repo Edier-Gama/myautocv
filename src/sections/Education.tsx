@@ -17,7 +17,7 @@ function Education (): any {
   const toggleEducation = useEducationAdd.toggleAddEducation
   const cancelEducation = useEducationCancel.cancelEducation
   return (
-    <section className='flex m-auto flex-col relative top-80 max-w-7xl flex-wrap' id='add-education-form'>
+    <section className='flex m-auto flex-col relative top-96 max-w-7xl flex-wrap' id='add-education-form'>
         <div>
            <p className='text-xl text-left font-semibold ml-3'>Educación</p>
         </div>
@@ -54,12 +54,12 @@ function Education (): any {
                       </div>
                   </section>
                   <div className='flex flex-wrap ml-3'>
-                    <div className='m-1'>
+                    <div className=''>
                       <ButtonWithLogo
                          text='Añadir'
                       />
                     </div>
-                    <div className='m-1'>
+                    <div className='mt-3'>
                       <ButtonWithLogo
                          text='Cancelar'
                          callback={cancelEducation}
