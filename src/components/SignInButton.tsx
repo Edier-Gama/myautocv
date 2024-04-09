@@ -1,8 +1,8 @@
+'use client'
+
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import { ButtonWithLogo } from './Button'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
-import { createSupabaseServerClient } from '@/utils/supabase/server'
-
 import { useEffect, useState } from 'react'
 import { getUserSession } from '@/utils/supabase/getUserSession'
 
