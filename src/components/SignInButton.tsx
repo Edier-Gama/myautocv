@@ -29,7 +29,7 @@ export default function SignInButton () {
           />
 
             )
-          : <p>Hola, {session.user.user_metadata.given_name} {session.user.user_metadata.family_name}</p>
+          : <div></div>
       }
     </section>
   )

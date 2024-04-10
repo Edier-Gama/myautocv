@@ -58,13 +58,13 @@ function Experience (): any {
                         <CalendarStartAndFinish/>
                       </div>
                   </section>
-                  <div className='flex flex-wrap ml-3'>
-                    <div className=''>
+                  <div className='flex flex-wrap'>
+                    <div className='w-96 m-3'>
                       <ButtonWithLogo
                          text='Añadir'
                       />
                     </div>
-                    <div className='mt-3'>
+                    <div className='w-96 m-3'>
                       <ButtonWithLogo
                          text='Cancelar'
                          callback={cancelExperience}
