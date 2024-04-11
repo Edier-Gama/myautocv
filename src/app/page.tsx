@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-'use client'
 import { Home } from '@/sections/Home'
 import { HeaderInfo } from '@/sections/HeaderInfo'
 import { AboutInfo } from '@/sections/AboutInfo'

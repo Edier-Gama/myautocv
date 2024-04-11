@@ -1,12 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import SignInButton from '@/sections/AuthButton'
-import { Header } from './Header'
+// import AuthButton from '@/sections/AuthButton'
+import HeaaderServer from '@/components/HeaderServer'
+import AuthButtonServer from '@/components/AuthButton'
 
 function Home (): any {
   return (
     <section className="max-w-7xl m-auto">
-      <Header/>
+      <HeaaderServer/>
       <main className="">
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
           <div className='z-10 flex flex-col justify-center items-center'>
@@ -23,7 +24,7 @@ function Home (): any {
             </section>
             <section className='flex flex-wrap mt-10 justify-center'>
               <div className=''>
-                <SignInButton/>
+                <AuthButtonServer/>
               </div>
                 <a
                   href='#cv-maker'

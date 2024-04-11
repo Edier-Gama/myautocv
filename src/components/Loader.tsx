@@ -11,7 +11,7 @@ const AvatarLoader = () => {
 
 const ButtonLoader = () => {
   return (
-    <Skeleton width={'380px'} height={'40px'} borderRadius={'10px'}/>
+    <Skeleton width={'380px'} height={'45px'} borderRadius={'10px'}/>
   )
 }
 
