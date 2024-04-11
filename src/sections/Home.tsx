@@ -5,7 +5,7 @@ import { Header } from './Header'
 
 function Home (): any {
   return (
-    <section className="max-w-7xl m-auto static">
+    <section className="max-w-7xl m-auto">
       <Header/>
       <main className="">
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">

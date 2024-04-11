@@ -4,7 +4,7 @@ import { AvatarLoader } from '@/components/Loader'
 
 function Header () {
   return (
-    <header className="mt-10 flex justify-right m-5">
+    <header className="mt-10 flex justify-right">
         <ul>
             <section>
               <Suspense fallback={<AvatarLoader/>}>

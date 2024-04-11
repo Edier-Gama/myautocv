@@ -6,7 +6,10 @@ export default async function AvatarComponent () {
   const session = await getUserSession()
   return (
         <section className='w-96 m-3'>
-            <Avatar src={session?.user.user_metadata.picture}></Avatar>
+            <Avatar
+              height={'60px'} width={'60px'}
+              src={session?.user.user_metadata.picture}>
+            </Avatar>
         </section>
   )
 }

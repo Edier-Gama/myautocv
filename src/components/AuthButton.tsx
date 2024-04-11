@@ -5,7 +5,7 @@ export default async function AuthButtonLogIn () {
   const session = await getUserSession()
   return (
     <section>
-      {session && (<div></div>)}
+      {(session != null) && (<div></div>)}
       {session === null && (
     <button
       onClick={async () => { await SignInWithLinkedin() }}
