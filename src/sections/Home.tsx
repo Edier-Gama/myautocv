@@ -1,11 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import SignInButton from '@/components/SignInButton'
+import SignInButton from '@/sections/AuthButton'
 import { Header } from './Header'
 
 function Home (): any {
   return (
-    <section className="max-w-7xl m-auto">
+    <section className="max-w-7xl m-auto static">
       <Header/>
       <main className="">
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
@@ -30,7 +30,6 @@ function Home (): any {
                   className='mt-3 md:ml-3 md:mt-0 h-11 bg-blue-600 flex justify-center items-center rounded-xl w-96 text-sm text-white font-sans'>Crear CV manualmente
                 </a>
             </section>
-
           </div>
           {/* Pensando si añadirlo: */}
           {/* <div className='relative top-32 rounded-lg'>

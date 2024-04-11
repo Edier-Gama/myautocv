@@ -1,15 +1,15 @@
-'use client'
-
-import { Avatar } from '@chakra-ui/react'
-import { getUserSessionStatus } from '@/logic/get-user-session'
+import { Suspense } from 'react'
+import AvatarComponent from '@/components/Avatar'
+import { AvatarLoader } from '@/components/Loader'
 
 function Header () {
-  const { session, userAvatar } = getUserSessionStatus()
   return (
     <header className="mt-10 flex justify-right m-5">
         <ul>
             <section>
-              <Avatar name='user_avatar' src={userAvatar} cursor={'pointer'}/>
+              <Suspense fallback={<AvatarLoader/>}>
+                 <AvatarComponent/>
+              </Suspense>
             </section>
         </ul>
       </header>

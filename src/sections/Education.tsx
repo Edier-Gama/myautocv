@@ -4,7 +4,7 @@
 import { InputComponent } from '@/components/Input'
 import { CalendarStartAndFinish } from '@/components/Calendar'
 import { TextArea } from '@/components/textarea'
-import { Button, FormLabel } from '@chakra-ui/react'
+import { FormLabel } from '@chakra-ui/react'
 import { useAddEducation, useCancelEducation } from '@/logic/use-add-education'
 
 import { useState } from 'react'
