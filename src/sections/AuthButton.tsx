@@ -5,7 +5,7 @@ import AuthButtonLogIn from '@/components/AuthButton'
 import { ButtonLoader } from '@/components/Loader'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 
-function AuthButtonClient ({ session }: any) {
+export default function AuthButtonClient ({ session }: any) {
   return (
     <section>
       <Suspense fallback={<ButtonLoader/>}>
@@ -24,5 +24,3 @@ function AuthButtonClient ({ session }: any) {
     </section>
   )
 }
-
-export { AuthButtonClient }
