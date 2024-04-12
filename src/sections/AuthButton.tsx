@@ -8,7 +8,6 @@ import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 export default function AuthButtonClient ({ session }: any) {
   return (
     <section>
-      <Suspense fallback={<ButtonLoader/>}>
          {(session != null) && (<div></div>)}
          {session === null && (
            <button
@@ -20,7 +19,6 @@ export default function AuthButtonClient ({ session }: any) {
               Iniciar sesión con LinkedIn
           </button>
          )}
-      </Suspense>
     </section>
   )
 }
