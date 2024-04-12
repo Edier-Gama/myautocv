@@ -21,6 +21,7 @@ function Home (): any {
                   Inicia sesión con LinkedIn
               </a> y crea un CV de manera automática usando <b>Inteligencia Artificial en un segundo</b>
             </p>
+            <h1 className='max-w-4xl text-3xl font-semibold text-left md:text-center mt-10'>App desarrollo, disponible proximamente...😉</h1>
             </section>
             <section className='flex flex-wrap mt-10 justify-center'>
               <div className=''>
