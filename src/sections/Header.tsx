@@ -10,12 +10,7 @@ function HeaderClient ({ session }: any) {
         <ul>
             <section>
                 <div className='w-96 m-3'>
-                  {(userAvatar !== null) && (
                     <AvatarComponent userAvatar={userAvatar}/>
-                  )}
-                  {(userAvatar === null) && (
-                     <AvatarLoader/>
-                  )}
                  </div>
             </section>
         </ul>

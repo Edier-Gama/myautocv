@@ -1,20 +1,25 @@
 'use client'
 
 import { Avatar, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
-import { SignOutSession } from '@/utils/supabase/sign-out-session'
 import { useRouter } from 'next/navigation'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
+import { createSupabase } from '@/utils/supabase/client'
 
 function AvatarComponent ({ userAvatar }: any) {
+  const supabase = createSupabase()
   const router = useRouter()
-  function signOut (): any {
-    SignOutSession()
+  const signOut = async () => {
+    await supabase.auth.signOut()
+    router.refresh()
   }
   return (
     <div>
     <Menu>
       <MenuButton>
         <Avatar
+           name='user'
+           bg={'gray'}
+           color={'white'}
            height={'60px'} width={'60px'}
            src={userAvatar}>
         </Avatar>
@@ -23,7 +28,7 @@ function AvatarComponent ({ userAvatar }: any) {
          {userAvatar !== undefined && (
             <div>
                 <MenuItem>Settings</MenuItem>
-                <MenuItem onClick={() => signOut()} className='font-sans'>Sign out</MenuItem>
+                <MenuItem onClick={() => { signOut() }} className='font-sans'>Sign out</MenuItem>
             </div>
          )}
          {userAvatar === undefined && (
