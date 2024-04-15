@@ -2,8 +2,8 @@
 import { Home } from '@/sections/Home'
 import { HeaderInfo } from '@/sections/HeaderInfo'
 import { AboutInfo } from '@/sections/AboutInfo'
-import { Experience } from '@/sections/Experience'
-import { Education } from '@/sections/Education'
+import { Experience } from '@/sections/ExperienceForm'
+import { Education } from '@/sections/EducationForm'
 
 export default function HomePage () {
   return (

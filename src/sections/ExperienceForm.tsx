@@ -5,9 +5,10 @@ import { InputComponent } from '@/components/Input'
 import { CalendarStartAndFinish } from '@/components/Calendar'
 import { TextArea } from '@/components/textarea'
 import { FormLabel } from '@chakra-ui/react'
-import { useAddExperience, useCancelExperience } from '@/logic/use-add-experience'
+import { useAddExperience, useCancelExperience } from '@/lib/use-add-experience'
 import { ButtonWithLogo } from '@/components/Button'
 import { useState } from 'react'
+import { addExperience } from '@/lib/add-experience'
 
 function Experience (): any {
   const useExperienceAdd = useAddExperience()
@@ -17,7 +18,7 @@ function Experience (): any {
   const cancelExperience = useExperienceCancel.cancelExperience
 
   return (
-    <section className='flex m-auto flex-col relative top-96 max-w-7xl flex-wrap' id='add-experience-form'>
+    <section className='flex m-auto flex-col relative top-96 mt max-w-7xl flex-wrap' id='add-experience-form'>
         <div>
            <p className='text-xl text-left font-semibold ml-3'>Experiencia Laboral</p>
         </div>
@@ -35,8 +36,14 @@ function Experience (): any {
             hasExperience && (
                 <section>
                   <section id='add-experience' className='flex flex-wrap'>
-                   <InputComponent placeholder='Empresa' labelText='Nombre de la empresa'/>
-                   <InputComponent placeholder='Cargo' labelText='Cargo'/>
+                   <InputComponent
+                      placeholder='Empresa'
+                      labelText='Nombre de la empresa'
+                    />
+                   <InputComponent
+                      placeholder='Cargo'
+                      labelText='Cargo'
+                    />
                   </section>
                   <section className='flex flex-wrap max-w-5xl'>
                       <TextArea
@@ -59,9 +66,11 @@ function Experience (): any {
                       </div>
                   </section>
                   <div className='flex flex-wrap'>
-                    <div className='w-96 m-3'>
+                    <div className='w-96 m-3 add-button'>
                       <ButtonWithLogo
                          text='Añadir'
+                         callback={addExperience}
+                         callBackData={setHasExperience}
                       />
                     </div>
                     <div className='w-96 m-3'>

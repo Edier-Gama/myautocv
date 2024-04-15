@@ -5,7 +5,7 @@ import { InputComponent } from '@/components/Input'
 import { CalendarStartAndFinish } from '@/components/Calendar'
 import { TextArea } from '@/components/textarea'
 import { FormLabel } from '@chakra-ui/react'
-import { useAddEducation, useCancelEducation } from '@/logic/use-add-education'
+import { useAddEducation, useCancelEducation } from '@/lib/use-add-education'
 
 import { useState } from 'react'
 import { ButtonWithLogo } from '@/components/Button'
@@ -18,7 +18,7 @@ function Education (): any {
   const cancelEducation = useEducationCancel.cancelEducation
   return (
     <section className='flex m-auto flex-col relative top-96 max-w-7xl flex-wrap' id='add-education-form'>
-        <div>
+        <div className='mt-10'>
            <p className='text-xl text-left font-semibold ml-3'>Educación</p>
         </div>
     <div className='flex flex-wrap flex-col'>

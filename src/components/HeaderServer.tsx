@@ -1,4 +1,4 @@
-import { getUserSessionStatus } from '@/logic/get-user-session'
+import { getUserSessionStatus } from '@/lib/get-user-session'
 import { HeaderClient } from '@/sections/Header'
 import { getUserSession } from '@/utils/supabase/get-user-session'
 import { Avatar } from '@chakra-ui/react'
