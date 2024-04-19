@@ -10,4 +10,13 @@ const SignInWithLinkedin = async () => {
     }
   })
 }
-export { SignInWithLinkedin }
+const SignInWithGoogle = async () => {
+  const supabase = createSupabase()
+  supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: 'https://myautocv.vercel.app/auth/callback'
+    }
+  })
+}
+export { SignInWithLinkedin, SignInWithGoogle }

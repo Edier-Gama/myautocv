@@ -2,7 +2,7 @@
 
 import { Avatar, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
-import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
+import { SignInWithLinkedin } from '@/utils/supabase/sign-in-functions'
 import { createSupabase } from '@/utils/supabase/client'
 
 function AvatarComponent ({ user, data, avatar }: any) {
@@ -16,6 +16,7 @@ function AvatarComponent ({ user, data, avatar }: any) {
     const userData = userInfo.provider_id === user?.user.user_metadata.provider_id
     return userData
   })
+  console.log(avatar)
   return (
     <div>
     <Menu>
@@ -32,7 +33,7 @@ function AvatarComponent ({ user, data, avatar }: any) {
          {avatar !== undefined && (
             <div>
               {
-                  <MenuItem className='font-sans font-semibold'>Hola, {selectedUser.given_name}</MenuItem>
+                  <MenuItem className='font-sans font-semibold'>Hola, {selectedUser.name}</MenuItem>
               }
               <MenuItem>Settings</MenuItem>
               <MenuItem onClick={() => { signOut() }} className='font-sans'>Sign out</MenuItem>

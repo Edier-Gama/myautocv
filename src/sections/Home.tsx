@@ -29,7 +29,7 @@ function Home (): any {
               </div>
                 <a
                   href='#cv-maker'
-                  className='mt-3 md:ml-3 md:mt-0 h-11 bg-blue-600 flex justify-center items-center rounded-xl w-96 text-sm text-white font-sans'>Crear CV manualmente
+                  className='w-96 md:w-60 mt-3 md:ml-3 md:mt-0 h-11 bg-blue-600 flex justify-center items-center rounded-xl text-sm text-white font-sans'>Crear CV manualmente
                 </a>
             </section>
           </div>
