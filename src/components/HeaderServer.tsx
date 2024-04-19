@@ -1,9 +1,21 @@
-import { getUserSessionStatus } from '@/lib/get-user-session'
 import { HeaderClient } from '@/sections/Header'
 import { getUserSession } from '@/utils/supabase/get-user-session'
-import { Avatar } from '@chakra-ui/react'
-
+import { createSupabaseServerClient } from '@/utils/supabase/server'
 export default async function HeaaderServer () {
-  const session = await getUserSession()
-  return <HeaderClient session={session}/>
+  const supabase = await createSupabaseServerClient()
+  const { data } = await supabase.from('users').select('*')
+
+  if (data != null) {
+    const session = await getUserSession()
+    const selectedUser = data.find((user: any) => {
+      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+      if (!session) {
+        return null
+      }
+      const userData = user.provider_id === session.user.user_metadata.provider_id
+      return userData
+    })
+    const userAvatar = selectedUser.picture
+    return <HeaderClient avatar={userAvatar} user={selectedUser}/>
+  }
 }

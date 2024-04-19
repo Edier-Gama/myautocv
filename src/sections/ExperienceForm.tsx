@@ -9,13 +9,15 @@ import { useAddExperience, useCancelExperience } from '@/lib/use-add-experience'
 import { ButtonWithLogo } from '@/components/Button'
 import { useState } from 'react'
 import { addExperience } from '@/lib/add-experience'
+import { Experience } from './Experience'
 
-function Experience (): any {
+function ExperienceComponent (): any {
   const useExperienceAdd = useAddExperience()
   const useExperienceCancel = useCancelExperience()
   const [hasExperience, setHasExperience] = useState(false)
   const toggleExperience = useExperienceAdd.toggleAddExperience
   const cancelExperience = useExperienceCancel.cancelExperience
+  const [experience, setExperience] = useState(false)
 
   return (
     <section className='flex m-auto flex-col relative top-96 mt max-w-7xl flex-wrap' id='add-experience-form'>
@@ -28,13 +30,16 @@ function Experience (): any {
           <ButtonWithLogo
               text='Añadir nueva educación'
               callback={toggleExperience}
-              callBackData={setHasExperience}
+              callBackData={{ setHasExperience }}
             />
         </div>
         )}
         {
             hasExperience && (
-                <section>
+              <section>
+                  {experience && (
+                    <Experience/>
+                  )}
                   <section id='add-experience' className='flex flex-wrap'>
                    <InputComponent
                       placeholder='Empresa'
@@ -69,8 +74,8 @@ function Experience (): any {
                     <div className='w-96 m-3 add-button'>
                       <ButtonWithLogo
                          text='Añadir'
-                         callback={addExperience}
-                         callBackData={setHasExperience}
+                         callback={addExperience({ setExperience, setHasExperience })}
+                         callBackData={setExperience}
                       />
                     </div>
                     <div className='w-96 m-3'>
@@ -89,4 +94,4 @@ function Experience (): any {
   )
 }
 
-export { Experience }
+export { ExperienceComponent }

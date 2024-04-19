@@ -2,7 +2,7 @@
 import { Home } from '@/sections/Home'
 import { HeaderInfo } from '@/sections/HeaderInfo'
 import { AboutInfo } from '@/sections/AboutInfo'
-import { Experience } from '@/sections/ExperienceForm'
+import { ExperienceComponent } from '@/sections/ExperienceForm'
 import { Education } from '@/sections/EducationForm'
 
 export default function HomePage () {
@@ -14,7 +14,7 @@ export default function HomePage () {
       <section className='relative'>
          <HeaderInfo/>
          <AboutInfo/>
-         <Experience/>
+         <ExperienceComponent/>
          <Education/>
       </section>
     </main>
