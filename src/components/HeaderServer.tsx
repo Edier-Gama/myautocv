@@ -5,7 +5,7 @@ export default async function HeaaderServer () {
   const supabase = await createSupabaseServerClient()
   const { data } = await supabase.from('users').select('*')
 
-  if (data != null) {
+  if (data) {
     const session = await getUserSession()
     const selectedUser = data.find((user: any) => {
       // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
@@ -17,5 +17,7 @@ export default async function HeaaderServer () {
     })
     const userAvatar = selectedUser.picture
     return <HeaderClient avatar={userAvatar} user={selectedUser}/>
+  } else {
+    return undefined
   }
 }
