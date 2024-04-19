@@ -5,14 +5,17 @@ import { useRouter } from 'next/navigation'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 import { createSupabase } from '@/utils/supabase/client'
 
-function AvatarComponent ({ avatar, user }: any) {
+function AvatarComponent ({ avatar, user, data }: any) {
   const supabase = createSupabase()
   const router = useRouter()
   const signOut = async () => {
     await supabase.auth.signOut()
     router.refresh()
   }
-
+  const selectedUser = data?.find((userInfo: any) => {
+    const userData = userInfo.provider_id === user?.user.user_metadata.provider_id
+    return userData
+  })
   return (
     <div>
     <Menu>
@@ -29,7 +32,7 @@ function AvatarComponent ({ avatar, user }: any) {
          {avatar !== undefined && (
             <div>
               {
-                  <MenuItem className='font-sans font-semibold'>Hola, {user.given_name}</MenuItem>
+                  <MenuItem className='font-sans font-semibold'>Hola, {selectedUser.given_name}</MenuItem>
               }
               <MenuItem>Settings</MenuItem>
               <MenuItem onClick={() => { signOut() }} className='font-sans'>Sign out</MenuItem>
