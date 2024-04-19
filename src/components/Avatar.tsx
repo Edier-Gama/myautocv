@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { SignInWithLinkedin } from '@/utils/supabase/sign-in-with-linkedin'
 import { createSupabase } from '@/utils/supabase/client'
 
-function AvatarComponent ({ avatar, user, data }: any) {
+function AvatarComponent ({ user, data, avatar }: any) {
   const supabase = createSupabase()
   const router = useRouter()
   const signOut = async () => {
