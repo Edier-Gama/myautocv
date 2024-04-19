@@ -5,6 +5,7 @@ export default async function HeaaderServer () {
   const supabase = await createSupabaseServerClient()
   const { data } = await supabase.from('users').select('*')
 
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (data) {
     const session = await getUserSession()
     const selectedUser = data.find((user: any) => {
