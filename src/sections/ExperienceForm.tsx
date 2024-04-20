@@ -30,7 +30,7 @@ function ExperienceComponent (): any {
           <ButtonWithLogo
               text='Añadir nueva educación'
               callback={toggleExperience}
-              callBackData={{ setHasExperience }}
+              callBackData={setHasExperience}
             />
         </div>
         )}
@@ -74,7 +74,7 @@ function ExperienceComponent (): any {
                     <div className='w-96 m-3 add-button'>
                       <ButtonWithLogo
                          text='Añadir'
-                         callback={addExperience({ setExperience, setHasExperience })}
+                         callback={addExperience}
                          callBackData={setExperience}
                       />
                     </div>

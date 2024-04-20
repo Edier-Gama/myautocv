@@ -25,7 +25,7 @@ export default function RootLayout ({
     <html lang='es'>
       <head>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="canonical" href='https://myautocv.vercel.app/' />
       <meta name="theme-color" content="#0000" />
       <meta name="keywords" content="myautocv, MyAutocv, MyAutoCV, My Auto cv, my auto cv, EdierGama, Edier Gama, auto CV, AutoCV, CV, Cv rapido, crear CV con IA, cv maker" />
