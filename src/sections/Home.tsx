@@ -1,6 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
-
-// import AuthButton from '@/sections/AuthButton'
 import HeaaderServer from '@/components/HeaderServer'
 import AuthButtonServer from '@/components/AuthButton'
 
@@ -23,7 +20,7 @@ function Home (): any {
             </p>
             <h1 className='max-w-4xl text-3xl font-semibold text-left md:text-center mt-10'>App en desarrollo, disponible próximamente...😉</h1>
             </section>
-            <section className='flex flex-wrap mt-10 justify-center'>
+            <section className='flex flex-wrap mt-10 justify-center m-0 w-96 md:w-full'>
               <div className=''>
                 <AuthButtonServer/>
               </div>
@@ -33,11 +30,10 @@ function Home (): any {
                 </a>
             </section>
           </div>
-          {/* Pensando si añadirlo: */}
-          {/* <div className='relative top-32 rounded-lg'>
+          <div className='relative top-32 rounded-lg'>
            <h1 className="max-w-4xl text-3xl font-semibold text-center md:text-3xl">Con un diseño minimalista...</h1>
            <img className='relative mt-5 rounded-lg' src='/cv.jpg' alt='CV example' width={800}/>
-          </div> */}
+          </div>
         </section>
       </main>
     </section>
