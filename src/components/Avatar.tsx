@@ -12,11 +12,7 @@ function AvatarComponent ({ user, data, avatar }: any) {
     await supabase.auth.signOut()
     router.refresh()
   }
-  const selectedUser = data?.find((userInfo: any) => {
-    const userData = userInfo.provider_id === user?.user.user_metadata.provider_id
-    return userData
-  })
-  console.log(avatar)
+
   return (
     <div>
     <Menu>
@@ -33,7 +29,7 @@ function AvatarComponent ({ user, data, avatar }: any) {
          {avatar !== undefined && (
             <div>
               {
-                  <MenuItem className='font-sans font-semibold'>Hola, {selectedUser.name}</MenuItem>
+                  <MenuItem className='font-sans font-semibold'>Hola, {user?.user.user_metadata.name}</MenuItem>
               }
               <MenuItem>Settings</MenuItem>
               <MenuItem onClick={() => { signOut() }} className='font-sans'>Sign out</MenuItem>

@@ -71,7 +71,7 @@ function ExperienceComponent (): any {
                       </div>
                   </section>
                   <div className='flex flex-wrap'>
-                    <div className='w-96 m-3 add-button'>
+                    <div className='w-96 m-3 add-button' onClick={ () => cancelExperience(setHasExperience)}>
                       <ButtonWithLogo
                          text='Añadir'
                          callback={addExperience}
