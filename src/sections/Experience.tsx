@@ -1,7 +1,11 @@
-function Experience () {
+function Experience ({ company, charge, jobDescription, jobAchievements, date }: any) {
   return (
-    <section>
-        <h2>Hola Mundo</h2>
+    <section className="experience-section inactive">
+      <p>{company}</p>
+      <p>{charge}</p>
+      <p>{jobDescription}</p>
+      <p>{jobAchievements}</p>
+      <p>{JSON.stringify(date)}</p>
     </section>
   )
 }

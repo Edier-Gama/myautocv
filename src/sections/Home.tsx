@@ -1,5 +1,5 @@
 import HeaaderServer from '@/components/HeaderServer'
-import AuthButtonServer from '@/components/AuthButton'
+import AuthButtonServer from '@/components/AuthButtonServer'
 
 function Home (): any {
   return (

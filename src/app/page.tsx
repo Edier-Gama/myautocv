@@ -2,8 +2,8 @@
 import { Home } from '@/sections/Home'
 import { HeaderInfo } from '@/sections/HeaderInfo'
 import { AboutInfo } from '@/sections/AboutInfo'
-import { ExperienceComponent } from '@/sections/ExperienceForm'
-import { Education } from '@/sections/EducationForm'
+import { ExperienceForm } from '@/components/experience-form/ExperienceForm'
+import { EducationForm } from '@/components/education-form/EducationForm'
 
 export default function HomePage () {
   return (
@@ -14,8 +14,8 @@ export default function HomePage () {
       <section className='relative'>
          <HeaderInfo/>
          <AboutInfo/>
-         <ExperienceComponent/>
-         <Education/>
+         <ExperienceForm/>
+         <EducationForm/>
       </section>
     </main>
   )

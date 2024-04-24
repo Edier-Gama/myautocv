@@ -1,11 +1,12 @@
-function addExperience (setExperience: any) {
+function addExperience () {
+  let experienceForm: any
   let experienceSection: any
   if (typeof window !== 'undefined') {
-    experienceSection = document.querySelector('#add-experience')
-    setExperience(true)
-    experienceSection?.classList.add('inactive')
+    experienceForm = document.querySelector('#add-experience')
+    experienceSection = document.querySelector('.experience-section')
+    experienceSection?.classList.remove('inactive')
+    experienceForm?.classList.add('inactive')
   }
-  return addExperience
 }
 
 export { addExperience }

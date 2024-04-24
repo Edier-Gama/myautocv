@@ -2,15 +2,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import { InputComponent } from '@/components/Input'
-import { CalendarStartAndFinish } from '@/components/Calendar'
 import { TextArea } from '@/components/textarea'
 import { FormLabel } from '@chakra-ui/react'
-import { useAddEducation, useCancelEducation } from '@/lib/use-add-education'
+import { useAddEducation, useCancelEducation } from '@/components/education-form/use-add-education'
 
 import { useState } from 'react'
 import { ButtonWithLogo } from '@/components/Button'
 
-function Education (): any {
+function EducationForm (): any {
   const useEducationAdd = useAddEducation()
   const useEducationCancel = useCancelEducation()
   const [hasEducation, setHasEducation] = useState(false)
@@ -46,10 +45,8 @@ function Education (): any {
                       />
                       <div className='flex flex-col'>
                         <FormLabel className='font-sans text-xl m-3'>Fecha de inicio</FormLabel>
-                        <CalendarStartAndFinish/>
-                      <div className='flex flex-col'>
+]                      <div className='flex flex-col'>
                         <FormLabel className='font-sans text-xl m-3'>Fecha de finalización</FormLabel>
-                        <CalendarStartAndFinish/>
                       </div>
                       </div>
                   </section>
@@ -75,4 +72,4 @@ function Education (): any {
   )
 }
 
-export { Education }
+export { EducationForm }

@@ -1,5 +1,6 @@
 'use client'
 
+import { Experience } from '@/sections/Experience'
 /* eslint-disable react/react-in-jsx-scope */
 import { Input, FormLabel } from '@chakra-ui/react'
 import { useState } from 'react'
