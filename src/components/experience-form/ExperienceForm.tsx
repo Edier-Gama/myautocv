@@ -69,6 +69,15 @@ function ExperienceForm (): any {
                       className='w-96 m-3 rounded'>
                     </input>
                     </div>
+                    <div className='flex flex-col'>
+                        <FormLabel className='font-sans text-xl m-3'>Duración en el cargo</FormLabel>
+                        <input
+                           onChange={(event) => { setDate(event.target.value) }}
+                           type="text"
+                           placeholder='1 año y 5 meses'
+                           className='w-96 m-3 rounded'>
+                        </input>
+                    </div>
                   </section>
                   <section className='flex flex-wrap max-w-5xl'>
                     <div className='flex flex-col'>
@@ -87,15 +96,6 @@ function ExperienceForm (): any {
                          className='m-3 w-96 resize-none rounded'>
                       </textarea>
                     </div>
-                      <div className='flex flex-col'>
-                        <FormLabel className='font-sans text-xl m-3'>Duración en el cargo</FormLabel>
-                        <input
-                           onChange={(event) => { setDate(event.target.value) }}
-                           type="text"
-                           placeholder='Duración en la empresa'
-                           className='w-96 m-3 rounded'>
-                        </input>
-                      </div>
                   </section>
                   <div className='flex flex-wrap'>
                     {

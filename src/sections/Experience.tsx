@@ -10,8 +10,8 @@ function Experience ({ company, charge, jobDescription, jobAchievements, date }:
       <p className="font-sans text-xl max-w-xl mt-4">{jobDescription}</p>
       <p className="font-sans text-xl max-w-xl mt-4">{jobAchievements}</p>
       <div className="flex flex-wrap">
-        <h1 className="font-sans max-w-4xl text-xl font-bold text-left mt-5">Duración  :</h1>
-        <p className="font-sans max-w-4xl text-xl font-semibold text-left mt-5 text-blue-700 ml-6">{date}</p>
+        <h1 className="font-sans max-w-4xl text-xl font-bold text-left mt-5">Duración en el cargo de</h1>
+        <p className="font-sans max-w-4xl text-xl font-semibold text-left mt-5 text-blue-700 ml-2">{date}</p>
       </div>
     </section>
   )
