@@ -1,7 +1,6 @@
 'use client'
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable react/react-in-jsx-scope */
-import Datepicker from 'tailwind-datepicker-react'
-import { options } from '../Calendar'
 import { FormLabel } from '@chakra-ui/react'
 import { useAddExperience, useCancelExperience } from '@/components/experience-form/use-add-experience'
 import { ButtonWithLogo } from '@/components/Button'
@@ -9,21 +8,6 @@ import { useState } from 'react'
 import { AddSectionButton } from '../add-section-button'
 import { Experience } from '@/sections/Experience'
 import { addExperience } from '@/lib/add-experience'
-
-const CalendarStartAndFinish = ({ setDate }: any): any => {
-  const [show, setShow] = useState(false)
-  const handleChange = (selectedDate: Date): any => {
-    setDate(selectedDate)
-  }
-  const handleClose = (state: boolean): any => {
-    setShow(state)
-  }
-  return (
-    <div className='font-sans m-3 w-96'>
-    <Datepicker options={options} onChange={handleChange} show={show} setShow={handleClose} classNames='font-sans'/>
-    </div>
-  )
-}
 
 function ExperienceForm (): any {
   // Funciones para manejar eventos en los formularios
@@ -57,7 +41,7 @@ function ExperienceForm (): any {
         {!hasExperience && (
         <div className='m-3 w-60 add-experience-button'>
           <ButtonWithLogo
-              text='Añadir nueva educación'
+              text='Añadir experiencia'
               callback={toggleExperience}
               callBackData={setHasExperience}
             />
@@ -104,21 +88,27 @@ function ExperienceForm (): any {
                       </textarea>
                     </div>
                       <div className='flex flex-col'>
-                        <FormLabel className='font-sans text-xl m-3'>Fecha de inicio</FormLabel>
-                        <CalendarStartAndFinish setDate={setDate}/>
-                      </div>
-                      <div className='flex flex-col'>
-                        <FormLabel className='font-sans text-xl m-3'>Fecha de finalización</FormLabel>
-                        <CalendarStartAndFinish setDate={setDate}/>
+                        <FormLabel className='font-sans text-xl m-3'>Duración en el cargo</FormLabel>
+                        <input
+                           onChange={(event) => { setDate(event.target.value) }}
+                           type="text"
+                           placeholder='Duración en la empresa'
+                           className='w-96 m-3 rounded'>
+                        </input>
                       </div>
                   </section>
                   <div className='flex flex-wrap'>
-                    <div className='w-96 m-3 add-button'>
-                      <AddSectionButton
-                        text='Añadir'
-                        callback={addExperience}
-                      />
-                    </div>
+                    {
+                      company && charge && jobDescription && jobAchievements && date && (
+                         <div className='w-96 m-3 add-button'>
+                           <AddSectionButton
+                             text='Añadir'
+                             callback={addExperience}
+                             functionParams={setHasExperience}
+                         />
+                         </div>
+                      )
+                    }
                     <div className='w-96 m-3'>
                       <ButtonWithLogo
                          text='Cancelar'
