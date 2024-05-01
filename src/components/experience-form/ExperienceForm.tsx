@@ -31,13 +31,9 @@ function ExperienceForm (): any {
            <p className='text-xl text-left font-semibold ml-3'>Experiencia Laboral</p>
         </div>
     <div className='flex flex-wrap flex-col'>
-        <Experience
-           company={company}
-           charge={charge}
-           jobDescription={jobDescription}
-           jobAchievements={jobAchievements}
-           date={date}
-        />
+      <div className='flex flex-wrap max-w-7xl'>
+        <Experience/>
+      </div>
         {!hasExperience && (
         <div className='m-3 w-60 add-experience-button'>
           <ButtonWithLogo
@@ -50,7 +46,7 @@ function ExperienceForm (): any {
         {
             hasExperience && (
               <section id='add-experience'>
-                  <section className='flex flex-wrap'>
+                  <section className='flex flex-wrap mt-10'>
                     <div className='flex flex-col'>
                     <FormLabel className='font-sans text-xl m-3'>Nombre de la empresa</FormLabel>
                     <input
@@ -104,7 +100,7 @@ function ExperienceForm (): any {
                            <AddSectionButton
                              text='Añadir'
                              callback={addExperience}
-                             functionParams={setHasExperience}
+                             functionParams={{ company, charge, jobDescription, jobAchievements, date, setHasExperience }}
                          />
                          </div>
                       )

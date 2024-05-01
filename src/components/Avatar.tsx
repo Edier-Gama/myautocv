@@ -2,7 +2,7 @@
 
 import { Avatar, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
-import { SignInWithLinkedin } from '@/utils/supabase/sign-in-functions'
+import { SignInWithGoogle, SignInWithLinkedin } from '@/utils/supabase/sign-in-functions'
 import { createSupabase } from '@/utils/supabase/client'
 
 function AvatarComponent ({ user, data, avatar }: any) {
@@ -36,7 +36,10 @@ function AvatarComponent ({ user, data, avatar }: any) {
             </div>
          )}
          {avatar === undefined && (
-             <MenuItem onClick={async () => { await SignInWithLinkedin() }} className='font-sans'>Sign In</MenuItem>
+          <div>
+            <MenuItem onClick={async () => { await SignInWithLinkedin() }} className='font-sans bg-white'>Continuar con LinkedIn</MenuItem>
+            <MenuItem onClick={async () => { await SignInWithGoogle() }} className='font-sans bg-white'>Continuar con Google</MenuItem>
+          </div>
          )}
         </MenuList>
      </Menu>

@@ -9,7 +9,7 @@ function Home (): any {
         <section className="animate-in fade-in zoom-in duration-500 m-3 min-w-96 flex relative top-20 max-w-7xl flex-wrap mt-10 justify-center">
           <div className='z-10 flex flex-col justify-center items-center'>
 
-            <section className='m-0 w-96 md:w-full'>
+            <section className='m-0 w-96 md:w-full home'>
             <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-xl text-left max-w-4xl md:text-center md:text-2xl">
               Crea un CV manualmente y descárgalo gratis o <a
