@@ -26,16 +26,16 @@ function ExperienceForm (): any {
   const [date, setDate]: any = useState()
 
   return (
-    <section className='flex m-auto flex-col relative top-96 mt max-w-7xl flex-wrap' id='add-experience-form'>
+    <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-experience-form'>
         <div>
-           <p className='text-xl text-left font-semibold ml-3'>Experiencia Laboral</p>
+           <p className='text-3xl text-left font-semibold ml-3'>Experiencia Laboral</p>
         </div>
     <div className='flex flex-wrap flex-col'>
       <div className='flex flex-wrap max-w-7xl'>
         <Experience/>
       </div>
         {!hasExperience && (
-        <div className='m-3 w-60 add-experience-button'>
+        <div className='m-3 w-60 add-experience-button mt-20'>
           <ButtonWithLogo
               text='Añadir experiencia'
               callback={toggleExperience}
@@ -98,6 +98,8 @@ function ExperienceForm (): any {
                       company && charge && jobDescription && jobAchievements && date && (
                          <div className='w-96 m-3 add-button'>
                            <AddSectionButton
+                             classList="w-96 rounded-xl justify-center font-sans text-sm text-white bg-blue-600 hover:bg-blue-500
+                             border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"
                              text='Añadir'
                              callback={addExperience}
                              functionParams={{ company, charge, jobDescription, jobAchievements, date, setHasExperience }}

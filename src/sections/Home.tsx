@@ -30,10 +30,10 @@ function Home (): any {
                 </a>
             </section>
           </div>
-          <div className='relative top-32 rounded-lg'>
+          {/* <div className='relative top-32 rounded-lg'>
            <h1 className="max-w-4xl text-3xl font-semibold text-center md:text-3xl">Con un diseño minimalista...</h1>
            <img className='relative mt-5 rounded-lg' src='/cv.jpg' alt='CV example' width={800}/>
-          </div>
+          </div> */}
         </section>
       </main>
     </section>

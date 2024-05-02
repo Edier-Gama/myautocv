@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Home } from '@/sections/Home'
 import { HeaderInfo } from '@/sections/HeaderInfo'
-import { AboutInfo } from '@/sections/AboutInfo'
 import { ExperienceForm } from '@/components/experience-form/ExperienceForm'
 import { EducationForm } from '@/components/education-form/EducationForm'
 
@@ -13,7 +12,6 @@ export default function HomePage () {
       </section>
       <section className='relative'>
          <HeaderInfo/>
-         <AboutInfo/>
          <ExperienceForm/>
          <EducationForm/>
       </section>

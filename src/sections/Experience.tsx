@@ -10,18 +10,18 @@ function Experience () {
 
   return (
     experience?.map((experience: any) => (
-    <section className="experience-section m-3" key={experience.company}>
+    <section className="experience-section m-3 max-w-4xl justify-center items-center" key={experience.company}>
       <div>
-        <div className="flex flex-wrap">
-        <h1 className="font-sans max-w-4xl text-3xl font-semibold text-left mt-5">{experience.company}</h1>
+        <div className="flex flex-wrap justify-between">
+          <h1 className="font-sans text-3xl font-semibold text-left mt-5">{experience.company}</h1>
+          <p className="font-sans text-xl text-left mt-7 ml-3">{experience.date}</p>
         </div>
-        <p className="font-sans text-xl max-w-xl mt-4 font-semibold">{experience.charge}</p>
+        <div className="flex">
+          <p className="font-sans text-xl max-w-xl mt-4 font-semibold">{experience.charge}</p>
+        </div>
       </div>
-      <p className="font-sans text-xl max-w-xl mt-4">{experience.jobDescription}</p>
-      <p className="font-sans text-xl max-w-xl mt-4">{experience.jobAchievements}</p>
+      <p className="font-sans text-xl max-w-96 md:max-w-4xl mt-4 text-left">{experience.jobDescription}. {experience.jobAchievements}</p>
       <div className="flex flex-wrap">
-        <h1 className="font-sans max-w-4xl text-xl font-bold text-left mt-5">Duración en el cargo de</h1>
-        <p className="font-sans max-w-4xl text-xl font-semibold text-left mt-5 text-blue-700 ml-2">{experience.date}</p>
       </div>
     </section>
     ))

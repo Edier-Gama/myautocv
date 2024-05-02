@@ -15,7 +15,7 @@ function EducationForm (): any {
   const cancelEducation = useEducationCancel.cancelEducation
 
   return (
-    <section className='flex m-auto flex-col relative top-96 mt max-w-7xl flex-wrap' id='add-education-form'>
+    <section className='flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-education-form'>
         <div>
            <p className='text-xl text-left font-semibold ml-3 mt-10'>Educación</p>
         </div>
