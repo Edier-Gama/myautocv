@@ -24,6 +24,6 @@
       ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs", ".next/types/**/*.ts", "*.js", "*.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.mjs", ".next/types/**/*.ts", "*.js", "*.mjs", "src/components/experience-form/options-initial-date.js"],
   "exclude": ["node_modules"]
 }

@@ -1,13 +1,16 @@
 'use client'
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable react/react-in-jsx-scope */
-import { FormLabel } from '@chakra-ui/react'
+import { FormLabel, Input, Textarea } from '@chakra-ui/react'
 import { useAddExperience, useCancelExperience } from '@/components/experience-form/use-add-experience'
 import { ButtonWithLogo } from '@/components/Button'
 import { useState } from 'react'
 import { AddSectionButton } from '../add-section-button'
 import { Experience } from '@/sections/Experience'
 import { addExperience } from '@/lib/add-experience'
+import Datepicker from 'tailwind-datepicker-react'
+import { optionsInitialDate } from './options-initial-date'
+import { optionsFinishDate } from './options-finish-date'
 
 function ExperienceForm (): any {
   // Funciones para manejar eventos en los formularios
@@ -22,8 +25,26 @@ function ExperienceForm (): any {
   const [company, setCompany]: any = useState()
   const [charge, setCharge]: any = useState()
   const [jobDescription, setJobDescription]: any = useState()
-  const [jobAchievements, setJobAchievements]: any = useState()
-  const [date, setDate]: any = useState()
+  const [initialDate, setInitialDate]: any = useState()
+  const [finishDate, setFinishDate]: any = useState()
+
+  const [showInitialDate, setShowInitialDate]: any = useState(false)
+  const [showFinishDate, setShowFinishDate]: any = useState(false)
+
+  const handleChangeInitDate = (selectedInitDate: Date) => {
+    setInitialDate(selectedInitDate)
+    console.log(initialDate)
+  }
+  const handleCloseInitialDate = (state: boolean) => {
+    setShowInitialDate(state)
+  }
+  const handleChangeFinishDate = (selectedFinishDate: Date) => {
+    setFinishDate(selectedFinishDate)
+    console.log(finishDate)
+  }
+  const handleCloseFinishDate = (state: boolean) => {
+    setShowFinishDate(state)
+  }
 
   return (
     <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-experience-form'>
@@ -31,7 +52,7 @@ function ExperienceForm (): any {
            <p className='text-3xl text-left font-semibold ml-3'>Experiencia Laboral</p>
         </div>
     <div className='flex flex-wrap flex-col'>
-      <div className='flex flex-wrap max-w-7xl'>
+      <div className='flex flex-col max-w-4xl'>
         <Experience/>
       </div>
         {!hasExperience && (
@@ -47,62 +68,67 @@ function ExperienceForm (): any {
             hasExperience && (
               <section id='add-experience'>
                   <section className='flex flex-wrap mt-10'>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col w-96 m-3 '>
                     <FormLabel className='font-sans text-xl m-3'>Nombre de la empresa</FormLabel>
-                    <input
+                    <Input
+                      height={'50px'} fontSize={'17px'}
                       onChange={(event) => { setCompany(event.target.value) }}
                       type="text"
                       placeholder='Empresa'
-                      className='w-96 m-3 rounded'>
-                    </input>
+                      className='rounded'/>
                     </div>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col w-96 m-3 '>
                     <FormLabel className='font-sans text-xl m-3'>Cargo</FormLabel>
-                    <input
+                    <Input
+                      height={'50px'} fontSize={'17px'}
                       onChange={(event) => { setCharge(event.target.value) }}
                       type="text"
                       placeholder='Cargo'
-                      className='w-96 m-3 rounded'>
-                    </input>
+                      className='rounded'/>
                     </div>
-                    <div className='flex flex-col'>
-                        <FormLabel className='font-sans text-xl m-3'>Duración en el cargo</FormLabel>
-                        <input
-                           onChange={(event) => { setDate(event.target.value) }}
-                           type="text"
-                           placeholder='1 año y 5 meses'
-                           className='w-96 m-3 rounded'>
-                        </input>
+                    <div className='flex flex-col w-96 m-3 '>
+                        <FormLabel className='font-sans text-xl'>Fecha de Inicio</FormLabel>
+                        <Datepicker
+                           options={optionsInitialDate}
+                           onChange={handleChangeInitDate}
+                           show={showInitialDate}
+                           setShow={handleCloseInitialDate}
+                           classNames='font-sans w-96'
+                        />
+                    </div>
+                    <div className='flex flex-col w-96 m-3 '>
+                        <FormLabel className='font-sans text-xl'>Fecha de finalización</FormLabel>
+                        <Datepicker
+                           options={optionsFinishDate}
+                           onChange={handleChangeFinishDate}
+                           show={showFinishDate}
+                           setShow={handleCloseFinishDate}
+                           classNames='font-sans w-96'
+                        />
                     </div>
                   </section>
-                  <section className='flex flex-wrap max-w-5xl'>
-                    <div className='flex flex-col'>
-                      <FormLabel className='font-sans text-xl m-3'>Describe las responsabilidades del cargo</FormLabel>
-                      <textarea
-                         onChange={(event) => { setJobDescription(event.target.value) }}
-                         placeholder='Liderar equipos. Hacer mantenimiento a bases de datos hechas en SQL. Crear diseños innovadores para la empresa ...'
-                         className='m-3 w-96 resize-none rounded'>
-                      </textarea>
-                    </div>
-                    <div className='flex flex-col'>
-                      <FormLabel className='font-sans text-xl m-3'>Describe tus logros, metas, premios</FormLabel>
-                      <textarea
-                         onChange={(event) => { setJobAchievements(event.target.value) }}
-                         placeholder='Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día ...'
-                         className='m-3 w-96 resize-none rounded'>
-                      </textarea>
-                    </div>
+                  <section className='flex flex-wrap max-w-4xl'>
+                  <div className='flex flex-col max-w-4xl'>
+                  <FormLabel className='font-sans text-xl m-3'>Describe las responsabilidades del cargo, logros, metas y premios</FormLabel>
+                  <Textarea
+                      onChange={(event) => { setJobDescription(event.target.value) }}
+                      height={'200px'}
+                      width={'790px'}
+                      placeholder='Liderar equipos. Hacer mantenimiento a bases de datos hechas en SQL. Crear diseños innovadores para la empresa ...'
+                      className='m-3 max-w-96 md:max-w-4xl resize-none rounded'>
+                  </Textarea>
+                 </div>
                   </section>
                   <div className='flex flex-wrap'>
                     {
-                      company && charge && jobDescription && jobAchievements && date && (
+                      company && charge && jobDescription && initialDate && finishDate && (
                          <div className='w-96 m-3 add-button'>
                            <AddSectionButton
                              classList="w-96 rounded-xl justify-center font-sans text-sm text-white bg-blue-600 hover:bg-blue-500
                              border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"
                              text='Añadir'
                              callback={addExperience}
-                             functionParams={{ company, charge, jobDescription, jobAchievements, date, setHasExperience }}
+                             functionParams={{ company, charge, jobDescription, initialDate, finishDate, setHasExperience }}
                          />
                          </div>
                       )

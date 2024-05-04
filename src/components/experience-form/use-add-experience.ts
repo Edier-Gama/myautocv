@@ -9,7 +9,7 @@ function useAddExperience (): any {
 
   function toggleAddExperience (setHasExperience: any): any {
     setHasExperience(true)
-    router.push('/#add-experience-form')
+    // router.push('/#add-experience-form')
     addExperienceButton?.classList.add('inactive')
   }
   return { toggleAddExperience }
@@ -22,7 +22,7 @@ function useCancelExperience (): any {
   const router = useRouter()
   function cancelExperience (setHasExperience: any): any {
     setHasExperience(false)
-    router.push('/#add-experience-form')
+    // router.push('/#add-experience-form')
     addExperienceButton?.classList.remove('inactive')
   }
   return { cancelExperience }

@@ -1,20 +1,20 @@
-function saveDataInLocalStorage ({ company, charge, jobDescription, jobAchievements, date }: any) {
+function saveDataInLocalStorage ({ company, charge, jobDescription, initialDate, finishDate }: any) {
   const existingData = localStorage.getItem('experience')
   let data = []
+  console.log(initialDate, finishDate)
 
   if (existingData !== null) {
     data = JSON.parse(existingData)
   }
 
-  // Agregar los nuevos datos al objeto existente
   data = [
     ...data,
     {
       company,
       charge,
       jobDescription,
-      jobAchievements,
-      date
+      initialDate,
+      finishDate
     }
 
   ]
