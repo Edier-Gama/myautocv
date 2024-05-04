@@ -7,11 +7,11 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://myautocv.vercel.app'),
-  title: 'My AutoCV - Crea CV en segundos con Inteligencia Artificial',
-  description: 'My AutoCV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
+  title: 'myautocv- Crea un CV en segundos con Inteligencia Artificial',
+  description: 'myautocv te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
   openGraph: {
-    title: 'My AutoCV - Crea CV en segundos con Inteligencia Artificial',
-    description: 'My AutoCV te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
+    title: 'myautocv- Crea un CV en segundos con Inteligencia Artificial',
+    description: 'myautocv te permite crear un CV minimalista y anti ATS manualmente o de manera automática usando inteligencia artificial y tu perfil de LinkedIn.',
     images: '/favicon.svg'
   }
 }
