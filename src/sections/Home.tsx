@@ -28,7 +28,7 @@ function Home (): any {
               </div>
                 <a
                   href='#header-info'
-                  className="w-96 md:w-72 rounded-xl justify-center font-sans text-xl text-gray-900 bg-white hover:bg-gray-100
+                  className="w-96 md:w-72 mt-3 md:mt-0 rounded-xl justify-center font-sans text-xl text-gray-900 bg-white hover:bg-gray-100
                   border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center md:ml-3">Crear CV manualmente
                 </a>
             </section>

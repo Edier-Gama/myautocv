@@ -39,7 +39,7 @@ function HeaderInfoForm (): any {
             <h1 className="text-3xl font-semibold m-3 text-left">Información base</h1>
             <div className='flex flex-wrap'>
               <div className='flex flex-col m-3 w-96'>
-                <FormLabel className='font-sans text-xl'>Nombre</FormLabel>
+                <FormLabel className='font-sans text-xl'>Nombre completo</FormLabel>
                 <Input
                   onChange={(event) => { setName(event.target.value) }}
                   type="text"

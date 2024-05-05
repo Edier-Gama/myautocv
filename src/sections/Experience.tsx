@@ -28,22 +28,18 @@ function Experience () {
       const finishParsed = `${finalMonth} ${finalYear}`
 
       return (
-         <section className="experience-section m-3 max-w-4xl justify-center items-center" key={experience.company}>
-           <div>
-             <div className="flex flex-wrap justify-between">
-               <h1 className="font-sans text-3xl font-semibold text-left mt-5">{experience.company}</h1>
+         <section className="experience-section m-3 max-w-7xl justify-center items-center mt-20" key={experience.company}>
+           <section className="flex flex-wrap">
+             <div className="flex flex-col">
+               <h1 className="font-sans text-2xl font-bold text-left">{experience.company}</h1>
+               <p className="font-sans text-xl max-w-xl mt-2 font-bold">{experience.charge}</p>
                <div className="flex justify-right">
-                 <p className="font-sans text-xl text-left mt-7">{initParsed} - </p>
-                 <p className="font-sans text-xl text-left mt-7 ml-2">{finishParsed}</p>
+                 <p className="font-sans text-xl text-left mt-2">{initParsed} - </p>
+                 <p className="font-sans text-xl text-left ml-2 mt-2">{finishParsed}</p>
                </div>
              </div>
-             <div className="flex">
-               <p className="font-sans text-xl max-w-xl mt-4 font-semibold">{experience.charge}</p>
-             </div>
-           </div>
-           <p className="font-sans text-xl max-w-96 md:max-w-4xl mt-4 text-left">{experience.jobDescription}</p>
-           <div className="flex flex-wrap">
-           </div>
+             <p className="font-sans text-xl mt-5 md:mt-1 max-w-4xl md:max-w-lg md:ml-20 text-left">{experience.jobDescription}</p>
+           </section>
          </section>
       )
     })

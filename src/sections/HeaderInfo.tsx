@@ -12,11 +12,10 @@ function HeaderInfo () {
           key={information.name}
           className="header-section relative max-w-4xl flex flex-col justify-center m-3">
           <div>
-            <h2 className="text-3xl font-sans font-semibold">{information.name}</h2>
+            <h2 className="text-5xl font-sans font-bold">{information.name}</h2>
             <p className="text-xl text-left max-w-4xl md:text-2xl mt-3">{information.profession}</p>
           </div>
           <div className="mt-32">
-            <h2 className="text-3xl font-sans font-semibold">Sobre Mi</h2>
             <p className="text-xl text-left max-w-4xl md:text-2xl mt-3">{information.description}</p>
           </div>
         </section>
