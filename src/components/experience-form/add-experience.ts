@@ -3,7 +3,6 @@ import { saveDataInLocalStorage } from '@/components/experience-form/local-stora
 function addExperience ({ functionParams }: any) {
   const { company, charge, jobDescription, initialDate, finishDate, setHasExperience } = functionParams
   let experienceForm: any
-  console.log(initialDate, finishDate)
   let experienceSection: any
   if (typeof window !== 'undefined') {
     setHasExperience(false)

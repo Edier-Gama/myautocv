@@ -1,4 +1,4 @@
-function saveHeaderDataInLocalStorage ({ functionParams }: any) {
+function saveHeaderDataInLocalStorage (functionParams: any) {
   const existingData = localStorage.getItem('basic_info')
   const { name, email, profession, x, linkedin, social, description } = functionParams
 
@@ -8,7 +8,6 @@ function saveHeaderDataInLocalStorage ({ functionParams }: any) {
     data = JSON.parse(existingData)
   }
 
-  // Agregar los nuevos datos al objeto existente
   data = [
     ...data,
     {

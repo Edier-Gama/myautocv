@@ -1,15 +1,15 @@
 interface ButtonProps {
-  text: any
+  text: string
   callback: any
   functionParams: any
+  classList?: string
 }
 
-const AddSectionButton = (props: any) => {
+const AddSectionButton = (props: ButtonProps) => {
   const { text, callback, functionParams, classList } = props
-  const setHasExperience = functionParams?.setHasExperience
   return (
         <button
-          onClick={() => callback({ functionParams }, setHasExperience)}
+          onClick={() => callback({ functionParams })}
           type="button"
           className={classList}>
           {text}

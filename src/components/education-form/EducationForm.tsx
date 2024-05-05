@@ -21,7 +21,7 @@ function EducationForm (): any {
         </div>
     <div className='flex flex-wrap flex-col'>
         {!hasEducation && (
-        <div className='m-3 w-60 add-education-button'>
+        <div className='m-3 w-60 add-education-button mt-10'>
           <ButtonWithLogo
               text='Añadir educación'
               callback={toggleEducation}
@@ -75,7 +75,7 @@ function EducationForm (): any {
                       </div>
                   </section>
                   <div className='flex flex-wrap'>
-                    <div className='w-96 m-3'>
+                    <div className='w-60 m-3'>
                     <ButtonWithLogo
                        text='Cancelar'
                        callback={cancelEducation}

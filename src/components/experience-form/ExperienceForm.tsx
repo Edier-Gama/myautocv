@@ -7,7 +7,7 @@ import { ButtonWithLogo } from '@/components/Button'
 import { useState } from 'react'
 import { AddSectionButton } from '../add-section-button'
 import { Experience } from '@/sections/Experience'
-import { addExperience } from '@/lib/add-experience'
+import { addExperience } from '@/components/experience-form/add-experience'
 import Datepicker from 'tailwind-datepicker-react'
 import { optionsInitialDate } from './options-initial-date'
 import { optionsFinishDate } from './options-finish-date'
@@ -56,7 +56,7 @@ function ExperienceForm (): any {
         <Experience/>
       </div>
         {!hasExperience && (
-        <div className='m-3 w-60 add-experience-button mt-20'>
+        <div className='m-3 w-60 add-experience-button mt-10'>
           <ButtonWithLogo
               text='Añadir experiencia'
               callback={toggleExperience}
@@ -122,9 +122,9 @@ function ExperienceForm (): any {
                   <div className='flex flex-wrap'>
                     {
                       company && charge && jobDescription && initialDate && finishDate && (
-                         <div className='w-96 m-3 add-button'>
+                         <div className='w-60 m-3 add-button'>
                            <AddSectionButton
-                             classList="w-96 rounded-xl justify-center font-sans text-sm text-white bg-blue-600 hover:bg-blue-500
+                             classList="w-60 rounded-xl justify-center font-sans text-xl text-white bg-blue-600 hover:bg-blue-500
                              border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"
                              text='Añadir'
                              callback={addExperience}
@@ -133,7 +133,7 @@ function ExperienceForm (): any {
                          </div>
                       )
                     }
-                    <div className='w-96 m-3'>
+                    <div className='w-60 m-3'>
                       <ButtonWithLogo
                          text='Cancelar'
                          callback={cancelExperience}

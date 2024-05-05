@@ -10,13 +10,15 @@ function Home (): any {
           <div className='z-10 flex flex-col justify-center items-center'>
 
             <section className='m-0 w-96 md:w-full home'>
-            <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
+            <h1 className="max-w-4xl text-3xl font-semibold text-left md:text-center md:text-6xl">Myautocv, haz un CV gratis anti ATS usando Inteligencia Artificial</h1>
             <p className="mt-10 text-xl text-left max-w-4xl md:text-center md:text-2xl">
-              Crea un CV manualmente y descárgalo gratis o <a
+              Crea un CV manualmente y descárgalo gratis o
+              <a
                 className='. text-blue-700 text-xl md:text-center md:text-2xl font-sans'
                 href='https://localhost:3001/auth/callback'>
-                  Inicia sesión con LinkedIn
-              </a> y crea un CV de manera automática usando <b>Inteligencia Artificial en un segundo</b>
+                Inicia sesión con LinkedIn
+              </a>
+              y crea un CV de manera automática usando <b>Inteligencia Artificial en un segundo</b>
             </p>
             <h1 className='max-w-4xl text-3xl font-semibold text-left md:text-center mt-10'>App en desarrollo, disponible próximamente...😉</h1>
             </section>
@@ -25,8 +27,9 @@ function Home (): any {
                 <AuthButtonServer/>
               </div>
                 <a
-                  href='#cv-maker'
-                  className='w-96 md:w-60 mt-3 md:ml-3 md:mt-0 h-11 bg-blue-600 flex justify-center items-center rounded-xl text-sm text-white font-sans'>Crear CV manualmente
+                  href='#header-info'
+                  className="w-96 md:w-72 rounded-xl justify-center font-sans text-xl text-gray-900 bg-white hover:bg-gray-100
+                  border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center md:ml-3">Crear CV manualmente
                 </a>
             </section>
           </div>

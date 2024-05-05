@@ -6,17 +6,6 @@ export const optionsInitialDate = {
   clearBtnText: 'Clear',
   maxDate: new Date('2030-01-01'),
   minDate: new Date('1950-01-01'),
-  //   theme: {
-  //     background: 'white',
-  //     todayBtn: 'a',
-  //     clearBtn: 'a',
-  //     icons: 'a',
-  //     text: 'a',
-  //     disabledText: 'bg-red-500',
-  //     input: 2,
-  //     inputIcon: 'a',
-  //     selected: 'a'
-  //   },
   icons: {
     prev: () => <span>Back</span>,
     next: () => <span>Next</span>
@@ -29,9 +18,4 @@ export const optionsInitialDate = {
   inputNameProp: 'date',
   inputIdProp: 'date',
   inputPlaceholderProp: 'Seleccionar'
-  // inputDateFormatProp: {
-  //   day: '',
-  //   month: '',
-  //   year: ''
-  // }
 }

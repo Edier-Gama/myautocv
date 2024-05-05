@@ -1,7 +1,6 @@
 function saveDataInLocalStorage ({ company, charge, jobDescription, initialDate, finishDate }: any) {
   const existingData = localStorage.getItem('experience')
   let data = []
-  console.log(initialDate, finishDate)
 
   if (existingData !== null) {
     data = JSON.parse(existingData)

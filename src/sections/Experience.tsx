@@ -1,8 +1,8 @@
 'use client'
 
 function Experience () {
-  const localData = localStorage.getItem('experience')
   let experience
+  const localData = localStorage?.getItem('experience')
   if (localData !== null) {
     experience = JSON.parse(localData)
   }

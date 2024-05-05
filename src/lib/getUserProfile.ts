@@ -6,7 +6,6 @@ async function getUserProfile (token: any) {
     }
   })
   const data = await response.json()
-  console.log(data)
 }
 
 export { getUserProfile }
