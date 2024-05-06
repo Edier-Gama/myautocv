@@ -1,6 +1,6 @@
 function saveHeaderDataInLocalStorage (functionParams: any) {
   const existingData = localStorage.getItem('basic_info')
-  const { name, email, profession, x, linkedin, social, description } = functionParams
+  const { name, email, profession, phone, linkedin, ubication, description } = functionParams
 
   let data = []
 
@@ -15,9 +15,9 @@ function saveHeaderDataInLocalStorage (functionParams: any) {
       email,
       profession,
       description,
-      x,
+      phone,
       linkedin,
-      social
+      ubication
     }
 
   ]

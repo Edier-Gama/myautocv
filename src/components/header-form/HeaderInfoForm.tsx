@@ -17,9 +17,9 @@ function HeaderInfoForm (): any {
   const [name, setName]: any = useState()
   const [email, setEmail]: any = useState()
   const [profession, setProfession]: any = useState()
-  const [x, setX]: any = useState()
+  const [phone, setPhone]: any = useState()
   const [linkedin, setLinkedin]: any = useState()
-  const [social, setSocial]: any = useState()
+  const [ubication, setUbication]: any = useState()
   const [description, setDescription]: any = useState()
 
   const [hasBasicInfo, setHasBasicInfo]: any = useState(null)
@@ -69,10 +69,10 @@ function HeaderInfoForm (): any {
                 />
               </div>
               <div className='m-3 w-96' >
-              <FormLabel className='font-sans text-xl'>Twitter</FormLabel>
+              <FormLabel className='font-sans text-xl'>Número de celular</FormLabel>
                  <Input
-                   placeholder='Usuario de X'
-                   onChange={(event) => { setX(event.target.value) }}
+                   placeholder='3227657039'
+                   onChange={(event) => { setPhone(event.target.value) }}
                    height={'50px'} fontSize={'17px'}/>
               </div>
               <div className='mt-3 m-3 w-96'>
@@ -83,10 +83,10 @@ function HeaderInfoForm (): any {
                    height={'50px'} fontSize={'17px'}/>
               </div>
               <div className='mt-3 m-3 w-96'>
-              <FormLabel className='font-sans text-xl'>Red de preferencia</FormLabel>
+              <FormLabel className='font-sans text-xl'>Ubicación</FormLabel>
                  <Input
-                   placeholder='Cualquier Red Social'
-                   onChange={(event) => { setSocial(event.target.value) }}
+                   placeholder='Bogotá, Colombia'
+                   onChange={(event) => { setUbication(event.target.value) }}
                    height={'50px'} fontSize={'17px'}/>
               </div>
                 <div className='flex flex-col max-w-4xl'>
@@ -107,7 +107,7 @@ function HeaderInfoForm (): any {
                   classList="m-3 mt-10 w-60 rounded-xl justify-center font-sans text-sm text-white bg-blue-600 hover:bg-blue-500
                   border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"
                   callback={addHeaderInfo}
-                  functionParams={{ name, email, profession, x, linkedin, social, description, setHasBasicInfo }}
+                  functionParams={{ name, email, profession, phone, linkedin, ubication, description, setHasBasicInfo }}
                   text='Añadir'
                 />
               )
