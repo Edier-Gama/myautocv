@@ -11,6 +11,7 @@ import { addExperience } from '@/components/experience-form/add-experience'
 import Datepicker from 'tailwind-datepicker-react'
 import { optionsInitialDate } from './options-initial-date'
 import { optionsFinishDate } from './options-finish-date'
+import { experienceIcon } from '@/consts/experiece-icon'
 
 function ExperienceForm (): any {
   // Funciones para manejar eventos en los formularios
@@ -48,8 +49,9 @@ function ExperienceForm (): any {
 
   return (
     <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-experience-form'>
-        <div>
-           <p className='text-3xl text-left font-semibold ml-3'>Experiencia Laboral</p>
+        <div className='flex items-center m-3 mb-10'>
+           {experienceIcon}
+           <h2 className='text-3xl font-sans font-bold p-3'>Experiencia Laboral</h2>
         </div>
     <div className='flex flex-wrap flex-col'>
       <div className='flex flex-col max-w-4xl'>

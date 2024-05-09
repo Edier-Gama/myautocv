@@ -28,19 +28,23 @@ function Experience () {
       const finishParsed = `${finalMonth} ${finalYear}`
 
       return (
-         <section className="experience-section m-3 max-w-7xl justify-center items-center mt-20" key={experience.company}>
-           <section className="flex flex-wrap">
-             <div className="flex flex-col">
-               <h1 className="font-sans text-2xl font-bold text-left max-w-56">{experience.company}</h1>
-               <p className="font-sans text-xl mt-2 font-bold max-w-56">{experience.charge}</p>
-               <div className="flex justify-right max-w-64">
-                 <p className="font-sans text-xl text-left mt-2">{initParsed} </p>
-                 <p className="font-sans text-xl text-left ml-2 mt-2">{finishParsed}</p>
-               </div>
-             </div>
-             <p className="font-sans text-xl max-w-96 md:max-w-lg md:ml-20 text-left">{experience.jobDescription}</p>
-           </section>
-         </section>
+        <section
+        key={experience.company}
+        className="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+        >
+        <div className="relative pb-12 md:col-span-2">
+          <div className="sticky top-0">
+            <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
+            >&bull;</span>
+            <h4 className="font-semibold text-3xl text-black dark:text-white">{experience.company}</h4>
+            <h3 className="mt-3 text-xl font-bold text-black">{experience.charge}</h3>
+            <time className="mt-3 p-0 m-0 text-xl text-black">{initParsed}</time>
+          </div>
+        </div>
+        <div className="text-xl max-w-80 md:max-w-4xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3">
+          {experience.jobDescription}
+        </div>
+      </section>
       )
     })
   )
