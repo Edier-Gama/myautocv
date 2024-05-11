@@ -24,6 +24,6 @@
       ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.mjs", ".next/types/**/*.ts", "*.js", "*.mjs", "src/components/experience-form/options-initial-date.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.mjs", ".next/types/**/*.ts", "*.js", "*.mjs", "src/components/experience-form/options-initial-date.js", "src/app/download/cv-components/experience.jsx", "src/app/download/cv-components/education.jsx", "src/app/download/cv-components/header-info.jsx"],
   "exclude": ["node_modules"]
 }

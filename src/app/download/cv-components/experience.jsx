@@ -1,22 +1,19 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 'use client'
 
-function CVEducation () {
-  let education: any
-  let localData: any
+function CVExperience () {
+  let experience
+  let localData
   if (typeof window !== 'undefined') {
-    localData = localStorage?.getItem('education')
-  }
-  if (localData !== null) {
-    education = JSON.parse(localData)
+    localData = localStorage?.getItem('experience')
+    experience = JSON.parse(localData)
   }
 
   return (
-    education?.map((education: any) => {
+    experience?.map((experience) => {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      const initialDate = new Date(education.initialDate)
+      const initialDate = new Date(experience.initialDate)
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      const finishDate = new Date(education.finishDate)
+      const finishDate = new Date(experience.finishDate)
 
       const months = [
         'Enero', 'Febebro', 'Marzo', 'Abril', 'Mayo', 'Junio',
@@ -32,7 +29,7 @@ function CVEducation () {
       const finishParsed = `${finalMonth} ${finalYear}`
 
       return (
-        <article className='max-w-96 m-auto md:max-w-4xl' key={education.name}>
+        <article className='max-w-96 m-auto md:max-w-4xl' key={experience.company}>
 
         <section
         className="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
@@ -41,8 +38,8 @@ function CVEducation () {
           <div className="sticky top-0">
             <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
             >&bull;</span>
-            <h4 className="font-bold text-3xl text-black dark:text-white font-sans">{education.title}</h4>
-            <h4 className="mt-3 font-semibold text-xl text-black dark:text-white font-sans">{education.name}</h4>
+            <h4 className="font-semibold text-3xl text-black dark:text-white font-sans">{experience.company}</h4>
+            <h3 className="mt-3 text-xl font-bold text-black font-sans">{experience.charge}</h3>
             <div className="flex flex-wrap">
               <time className="mt-3 p-0 m-0 text-xl text-black font-sans">{initParsed}</time>
               <time className="mt-3 p-0 m-0 text-xl text-black ml-3 font-sans"> {finishParsed}</time>
@@ -50,7 +47,7 @@ function CVEducation () {
           </div>
         </div>
         <div className="text-xl max-w-80 md:max-w-4xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans">
-          {education.description}
+          {experience.jobDescription}
         </div>
       </section>
       </article>
@@ -59,4 +56,4 @@ function CVEducation () {
   )
 }
 
-export { CVEducation }
+export { CVExperience }

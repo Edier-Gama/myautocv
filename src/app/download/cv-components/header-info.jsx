@@ -7,16 +7,14 @@ import { worldWideLogo } from '@/consts/world-icon'
 import { AboutMeIcon } from '@/consts/about-me-icon'
 
 function CVHeaderInfo () {
-  let userInfo: any
-  let localData: any
+  let userInfo
+  let localData
   if (typeof window !== 'undefined') {
     localData = localStorage?.getItem('basic_info')
-  }
-  if (localData !== null) {
     userInfo = JSON.parse(localData)
   }
   return (
-    userInfo?.map((information: any) => {
+    userInfo?.map((information) => {
       return (
         <section
           key={information.name}
