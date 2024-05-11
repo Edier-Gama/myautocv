@@ -8,16 +8,22 @@ import { experienceIcon } from '@/consts/experiece-icon'
 import { usePDF } from 'react-to-pdf'
 import { UserCurriculum } from '@/app/download/cv-components/user-cv'
 import { Button } from '@chakra-ui/react'
+import { useRouter } from 'next/navigation'
 
 export default function Download () {
   const { toPDF, targetRef } = usePDF({ filename: 'page.pdf' })
-
+  const router = useRouter()
+  function downloadPDF (): any {
+    setTimeout(() => {
+      toPDF()
+      router.push('/')
+    })
+  }
   return (
     <main className='max-w-96 m-auto p-3 md:max-w-4xl'>
       <Button
-          onClick={() => { toPDF() }}
+          onClick={downloadPDF()}
           className='btn btn-primary mt-20 cursor-pointer m-3'>
-          Descarga tu CV
       </Button>
       <section ref={targetRef} className='p-5'>
         <UserCurriculum/>
