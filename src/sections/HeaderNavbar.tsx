@@ -1,6 +1,5 @@
 'use client'
 
-import { AvatarLoader } from '@/components/Loader'
 import { AvatarComponent } from '@/components/Avatar'
 
 function HeaderClient ({ user, data, avatar }: any) {

@@ -1,6 +1,6 @@
 'use client'
 
-function Experience () {
+function CVExperience () {
   let experience
   const localData = localStorage?.getItem('experience')
   if (localData !== null) {
@@ -55,4 +55,4 @@ function Experience () {
   )
 }
 
-export { Experience }
+export { CVExperience }
