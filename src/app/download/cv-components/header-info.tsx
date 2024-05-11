@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 'use client'
 import Image from 'next/image'
 import { phone } from '@/consts/phone-logo'
@@ -6,8 +7,11 @@ import { worldWideLogo } from '@/consts/world-icon'
 import { AboutMeIcon } from '@/consts/about-me-icon'
 
 function CVHeaderInfo () {
-  let userInfo
-  const localData = localStorage?.getItem('basic_info')
+  let userInfo: any
+  let localData: any
+  if (typeof window !== 'undefined') {
+    localData = localStorage?.getItem('basic_info')
+  }
   if (localData !== null) {
     userInfo = JSON.parse(localData)
   }

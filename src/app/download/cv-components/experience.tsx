@@ -1,8 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 'use client'
 
 function CVExperience () {
-  let experience
-  const localData = localStorage?.getItem('experience')
+  let experience: any
+  let localData: any
+  if (typeof window !== 'undefined') {
+    localData = localStorage?.getItem('experience')
+  }
   if (localData !== null) {
     experience = JSON.parse(localData)
   }

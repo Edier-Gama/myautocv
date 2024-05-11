@@ -1,8 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 'use client'
 
 function CVEducation () {
   let education: any
-  const localData = localStorage?.getItem('education')
+  let localData: any
+  if (typeof window !== 'undefined') {
+    localData = localStorage?.getItem('education')
+  }
   if (localData !== null) {
     education = JSON.parse(localData)
   }
