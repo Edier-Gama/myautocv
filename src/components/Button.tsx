@@ -1,6 +1,6 @@
 interface ButtonProps {
   svg?: any
-  text: any
+  text?: any
   callback?: any
   callBackData?: any
 }

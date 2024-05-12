@@ -3,8 +3,7 @@ import { Home } from '@/sections/Home'
 import { HeaderInfoForm } from '@/components/header-form/HeaderInfoForm'
 import { ExperienceForm } from '@/components/experience-form/ExperienceForm'
 import { EducationForm } from '@/components/education-form/EducationForm'
-import { Button } from '@chakra-ui/react'
-
+import { ButtonWithLogo } from '@/components/Button'
 export default function HomePage () {
   return (
     <main>
@@ -13,9 +12,9 @@ export default function HomePage () {
          <HeaderInfoForm/>
          <ExperienceForm/>
          <EducationForm/>
-         <Button className='btn btn-primary mt-96 cursor-pointer'>
-          <a href="/download">Lets see you beauty CV</a>
-         </Button>
+         <div className='btn btn-primary mt-96 cursor-pointer mb-20 pt-20 p-5'>
+           <a href='/download'>Descargar PDF</a>
+         </div>
       </section>
     </main>
   )
