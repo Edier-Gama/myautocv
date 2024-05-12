@@ -17,7 +17,7 @@ export default function Download () {
     setTimeout(() => {
       toPDF()
       router.push('/')
-    })
+    }, 1000)
   }
   return (
     <main className='max-w-96 m-auto p-3 md:max-w-4xl'>
