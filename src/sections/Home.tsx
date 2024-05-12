@@ -6,7 +6,7 @@ function Home (): any {
     <section className="max-w-7xl m-auto">
       <HeaaderServer/>
       <main className="">
-        <section className="relative max-w-96 m-auto md:max-w-4xl flex flex-col justify-center p-5 mt-10">
+        <section className="relative max-w-96 m-auto md:max-w-4xl flex flex-col justify-center p-5 mt-32">
           <div className='z-10 flex flex-col justify-center items-center'>
 
             <section className='home'>
@@ -15,11 +15,6 @@ function Home (): any {
                 Crea y descarga en PDF tu CV con <b>ayuda de Inteligencia Artificial </b>
                 o guarda el CV en tu perfil iniciando sesión
               </p>
-            </section>
-            <section className='relative max-w-96 md:max-w-4xl flex flex-col justify-centers p-5'>
-              <div className=''>
-                <AuthButtonServer/>
-              </div>
             </section>
           </div>
         </section>

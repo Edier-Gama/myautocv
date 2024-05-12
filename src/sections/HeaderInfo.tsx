@@ -18,8 +18,8 @@ function HeaderInfo () {
           key={information.name}
           className="header-section relative max-w-96 m-auto md:max-w-4xl flex flex-col justify-center p-3">
           <div>
-            <h2 className="text-5xl font-sans font-bold">{information.name}</h2>
-            <p className="text-xl text-left max-w-4xl md:text-2xl mt-5">{information.profession}</p>
+            <h2 className=" text-4xl md:text-5xl font-sans font-bold">{information.name}</h2>
+            <p className="text-xl text-left max-w-4xl md:text-2xl mt-5 font-semibold">{information.profession}</p>
             <section className="flex flex-wrap mt-5 md:inline-flex">
               <div className='flex'>
                 <div className='border-neutral-500 border rounded-md p-3'>{phone}</div>
