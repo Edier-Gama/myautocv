@@ -20,12 +20,13 @@ export default function Download () {
     }, 1000)
   }
   return (
-    <main className='max-w-96 m-auto p-3 md:max-w-4xl'>
+    <main className='max-w-4xl'>
       <Button
           onClick={downloadPDF()}
           className='btn btn-primary mt-20 cursor-pointer m-3'>
+          Revisa tus descargas, Gracias por usar MyAutoCV
       </Button>
-      <section ref={targetRef} className='p-5'>
+      <section ref={targetRef} className='p-5 mt-96'>
         <UserCurriculum/>
       </section>
     </main>

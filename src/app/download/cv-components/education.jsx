@@ -47,7 +47,7 @@ function CVEducation () {
             </div>
           </div>
         </div>
-        <div className="text-xl max-w-80 md:max-w-4xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans">
+        <div className="text-xl w-[42rem] text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans">
           {education.description}
         </div>
       </section>
