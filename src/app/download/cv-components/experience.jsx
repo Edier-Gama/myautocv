@@ -32,7 +32,7 @@ function CVExperience () {
       <article className='max-w-4xl' key={experience.company}>
         <section className="flex justify-center">
         <div className="relative mt-5 md:col-span-2">
-          <div className="sticky top-0">
+          <div className="sticky top-0 w-[20rem]">
             <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
             >&bull;</span>
             <h4 className="font-semibold text-3xl text-black dark:text-white font-sans">{experience.company}</h4>

@@ -31,12 +31,13 @@ function CVEducation () {
 
       return (
         <article className='max-w-4xl' key={education.name}>
-        <section className="relative mx-12 pb-12 flex">
+        <section className="relative justify-center flex">
         <div className="relative md:col-span-2">
-          <div className="sticky top-0">
+          <div className="sticky top-0 w-[20rem]">
             <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
             >&bull;</span>
             <h4 className="font-semibold text-3xl text-black dark:text-white font-sans">{education.title}</h4>
+            <p className="font-semibold text-xl text-black dark:text-white font-sans">{education.name}</p>
             <div className="flex flex-wrap">
               <time className="mt-3 p-0 m-0 text-xl text-black font-sans">{initParsed}</time>
               <time className="mt-3 p-0 m-0 text-xl text-black ml-3 font-sans"> {finishParsed}</time>

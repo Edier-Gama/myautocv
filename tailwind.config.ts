@@ -19,7 +19,8 @@ const config: Config = {
       },
       spacing: {
         158: '42rem',
-        120: '32rem'
+        120: '32rem',
+        100: '20rem'
       }
     },
     fontFamily: {
