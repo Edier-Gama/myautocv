@@ -13,20 +13,22 @@ import { useRouter } from 'next/navigation'
 export default function Download () {
   const { toPDF, targetRef } = usePDF({ filename: 'page.pdf' })
   const router = useRouter()
-  // function downloadPDF (): any {
-  //   setTimeout(() => {
-  //     toPDF()
-  //     router.push('/')
-  //   }, 1000)
-  // }
-  // downloadPDF()
+  function downloadPDF (): any {
+    setTimeout(() => {
+      toPDF()
+      router.push('/')
+    }, 1000)
+  }
+  downloadPDF()
   return (
     <>
-      <div className='flex flex-col justify-center items-center mt-52 m-3'>
-        <h2 className="text-4xl font-sans font-bold ">Gracias por usar MyAutoCV 🌸</h2>
-        <p className="text-xl mt-5">Tu CV se está descargando en estos momentos ...</p>
+      <div className='flex flex-col justify-center items-center mt-52 m-3 mb-96 pb-96'>
+        <h2 className="text-4xl font-sans font-bold text-center">Gracias por usar MyAutoCV ✨</h2>
+        <p className="text-xl mt-5 text-center">Tu CV <b>se está descargando</b> en estos momentos 🌸</p>
       </div>
-      <section ref={targetRef} className='p-5 max-w-7xl'>
+      <div className='mb-96 pb-96'>
+      </div>
+      <section ref={targetRef} className=''>
         <UserCurriculum/>
       </section>
     </>

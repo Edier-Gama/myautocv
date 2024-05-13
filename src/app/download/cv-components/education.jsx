@@ -31,7 +31,7 @@ function CVEducation () {
 
       return (
         <article className='max-w-4xl' key={education.name}>
-        <section className="relative mx-12 pb-12">
+        <section className="relative mx-12 pb-12 flex">
         <div className="relative md:col-span-2">
           <div className="sticky top-0">
             <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
@@ -43,7 +43,7 @@ function CVEducation () {
             </div>
           </div>
         </div>
-        <div className="w-[42rem] text-xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans mt-5">
+        <div className="ml-10 w-[30rem] text-xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans mt-2">
           {education.description}
         </div>
        </section>

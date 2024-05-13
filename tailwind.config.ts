@@ -18,7 +18,8 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       spacing: {
-        158: '42rem'
+        158: '42rem',
+        120: '32rem'
       }
     },
     fontFamily: {
