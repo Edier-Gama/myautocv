@@ -3,7 +3,7 @@ import { Home } from '@/sections/Home'
 import { HeaderInfoForm } from '@/components/header-form/HeaderInfoForm'
 import { ExperienceForm } from '@/components/experience-form/ExperienceForm'
 import { EducationForm } from '@/components/education-form/EducationForm'
-import { ButtonWithLogo } from '@/components/Button'
+import { pdfLogo } from '@/consts/pdf-logo'
 export default function HomePage () {
   return (
     <main>
@@ -12,8 +12,8 @@ export default function HomePage () {
          <HeaderInfoForm/>
          <ExperienceForm/>
          <EducationForm/>
-         <div className='btn btn-primary mt-96 cursor-pointer mb-20 pt-20 p-5'>
-           <a href='/download'>Descargar PDF</a>
+         <div className='mt-96 cursor-pointer mb-20 pt-20 p-3 w-60'>
+           <a href='/download' className='p-4 w-60 rounded bg-red-700 text-white'>Descargar PDF</a>
          </div>
       </section>
     </main>
