@@ -29,12 +29,9 @@ function CVExperience () {
       const finishParsed = `${finalMonth} ${finalYear}`
 
       return (
-        <article className='max-w-4xl' key={experience.company}>
-
-        <section
-        className="relative mx-12 pb-12"
-        >
-        <div className="relative pb-12 md:col-span-2">
+      <article className='max-w-4xl' key={experience.company}>
+        <section className="relative mx-12 pb-12">
+        <div className="relative mt-5 md:col-span-2">
           <div className="sticky top-0">
             <span className="text-blue-600 -left-[44px] absolute rounded-full text-5xl"
             >&bull;</span>
@@ -46,10 +43,10 @@ function CVExperience () {
             </div>
           </div>
         </div>
-        <div className="w-[42rem] text-xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans">
+        <div className="w-[42rem] text-xl text-black relative flex flex-col gap-2 pb-4  md:col-span-3 font-sans mt-5">
           {experience.jobDescription}
         </div>
-      </section>
+       </section>
       </article>
       )
     })

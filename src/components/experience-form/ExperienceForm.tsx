@@ -25,7 +25,7 @@ function ExperienceForm (): any {
 
   const [company, setCompany]: any = useState()
   const [charge, setCharge]: any = useState()
-  const [jobDescription, setJobDescription]: any = useState()
+  const [jobDescription, setJobDescription]: any = useState('')
   const [initialDate, setInitialDate]: any = useState()
   const [finishDate, setFinishDate]: any = useState()
 
@@ -46,7 +46,7 @@ function ExperienceForm (): any {
   const handleCloseFinishDate = (state: boolean) => {
     setShowFinishDate(state)
   }
-
+  const minCaracteres = 160
   return (
     <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-experience-form'>
         <div className='flex items-center m-3 mb-10'>
@@ -113,6 +113,7 @@ function ExperienceForm (): any {
                   <div className='flex flex-col max-w-4xl'>
                   <FormLabel className='font-sans text-xl m-3'>Describe las responsabilidades del cargo, logros, metas y premios</FormLabel>
                   <Textarea
+                      minLength={87}
                       onChange={(event) => { setJobDescription(event.target.value) }}
                       height={'200px'}
                       width={'790px'}
@@ -123,7 +124,7 @@ function ExperienceForm (): any {
                   </section>
                   <div className='flex flex-wrap'>
                     {
-                      company && charge && jobDescription && initialDate && finishDate && (
+                      company && charge && jobDescription.length > 160 && initialDate && finishDate && (
                          <div className='w-60 m-3 add-button'>
                            <AddSectionButton
                              classList="w-60 rounded-xl justify-center font-sans text-xl text-white bg-blue-600 hover:bg-blue-500

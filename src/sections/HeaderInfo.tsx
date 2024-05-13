@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import { phone } from '@/consts/phone-logo'
-import { email } from '@/consts/email-logo'
+import { phoneLogo } from '@/consts/phone-logo'
+import { emailLogo } from '@/consts/email-logo'
 import { worldWideLogo } from '@/consts/world-icon'
 import { AboutMeIcon } from '@/consts/about-me-icon'
 
@@ -22,11 +22,11 @@ function HeaderInfo () {
             <p className="text-xl text-left max-w-4xl md:text-2xl mt-5 font-semibold">{information.profession}</p>
             <section className="flex flex-wrap mt-5 md:inline-flex">
               <div className='flex'>
-                <div className='border-neutral-500 border rounded-md p-3'>{phone}</div>
+                <div className='border-neutral-500 border rounded-md p-3'>{phoneLogo}</div>
                 <a href={'/'} className='ml-3 font-semibold mt-3'>{information.phone}</a>
               </div>
               <div className='flex md:mt-0'>
-                <div className='flex border-neutral-500 border rounded-md p-3 md:ml-3 sm:mt-0 mt-2'>{email}</div>
+                <div className='flex border-neutral-500 border rounded-md p-3 md:ml-3 sm:mt-0 mt-2'>{emailLogo}</div>
                 <a
                   className='ml-3 font-semibold mt-5 md:mt-3'
                   title={`Enviar un correo electrónico a ${information.name} al correo ${information.email}`}

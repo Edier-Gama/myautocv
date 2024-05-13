@@ -5,17 +5,20 @@ import { experienceIcon } from '@/consts/experiece-icon'
 
 function UserCurriculum () {
   return (
-        <section className='mt-20'>
-         <CVHeaderInfo/>
-         <div className='flex m-5 mb-10'>
-           <h2 className='text-4xl font-sans font-bold m-3'>Experiencia Laboral</h2>
-        </div>
-         <CVExperience/>
-         <div className='flex m-5 mb-10'>
-           <h2 className='text-4xl font-sans font-bold m-3'>Educación</h2>
-        </div>
-         <CVEducation/>
-      </section>
+  <section className=' mt-96 pt-96'>
+  <CVHeaderInfo/>
+  <div className='flex mb-10 m-3'>
+    <div className='mt-5'>
+    {experienceIcon}
+    </div>
+    <h2 className='text-4xl font-sans font-bold m-2'>Experiencia Laboral</h2>
+ </div>
+  <CVExperience/>
+  <div className='flex mb-10 m-5'>
+    <h2 className='text-4xl font-sans font-bold mt-5'>Educación</h2>
+ </div>
+  <CVEducation/>
+  </section>
   )
 }
 
