@@ -10,12 +10,12 @@ function UserCurriculum () {
       <CVHeaderInfo/>
       <div className='flex mb-10 m-3'>
         <div className='mt-5'>{experienceIcon}</div>
-        <h2 className='text-4xl font-sans font-bold w-full m-3'>Experiencia Laboral</h2>
+        <h2 className='text-4xl font-sans font-bold w-full m-3'>Work Experience</h2>
       </div>
       <CVExperience/>
       <div className='flex mb-10 m-3'>
         <div className='mt-5'>{experienceIcon}</div>
-        <h2 className='text-4xl font-sans font-bold w-full m-3'>Educación</h2>
+        <h2 className='text-4xl font-sans font-bold w-full m-3'>Education</h2>
       </div>
       <CVEducation/>
     </div>

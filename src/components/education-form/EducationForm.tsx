@@ -39,11 +39,11 @@ function EducationForm (): any {
   }
   const [name, setName]: any = useState()
   const [title, setTitle]: any = useState()
-  const [description, setDescription]: any = useState()
+  const [description, setDescription]: any = useState('')
   return (
-    <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-education-form'>
+    <section className='justify-center flex m-auto flex-col relative top-20 mt max-w-4xl flex-wrap' id='add-education-form'>
     <div className='flex items-center m-3 mb-10'>
-        <h2 className='text-4xl font-sans font-bold p-3'>Educación</h2>
+        <h2 className='text-4xl font-sans font-bold p-3'>Education</h2>
     </div>
     <div className='flex flex-wrap flex-col'>
         <div className='flex flex-col max-w-4xl'>
@@ -51,9 +51,9 @@ function EducationForm (): any {
         </div>
     </div>
     {!hasEducation && (
-        <div className='m-3 w-60 add-education-button mt-10'>
+        <div className='m-3 w-60 add-education-button'>
             <ButtonWithLogo
-                text='Añadir educación'
+                text='Add education'
                 callback={toggleEducation}
                 callBackData={setHasEducation}
             />
@@ -63,25 +63,25 @@ function EducationForm (): any {
         <section id='add-education'>
             <section className='flex flex-wrap mt-10'>
                 <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl m-3'>Nombre de la institución</FormLabel>
+                    <FormLabel className='font-sans text-xl m-3'>Institution name</FormLabel>
                     <Input
                         height={'50px'} fontSize={'17px'}
                         onChange={(event) => { setName(event.target.value) }}
                         type="text"
-                        placeholder='Universidad Nacional'
+                        placeholder='Nacional University of Colombia'
                         className='rounded'/>
                 </div>
                 <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl m-3'>Título</FormLabel>
+                    <FormLabel className='font-sans text-xl m-3'>Title</FormLabel>
                     <Input
                         height={'50px'} fontSize={'17px'}
                         onChange={(event) => { setTitle(event.target.value) }}
                         type="text"
-                        placeholder='Ingeniero Mecánico'
+                        placeholder='Mechanic Engineer'
                         className='rounded'/>
                 </div>
                 <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl'>Fecha de Inicio</FormLabel>
+                    <FormLabel className='font-sans text-xl'>Start date</FormLabel>
                     <DatePicker
                         options={optionsInitialDate}
                         onChange={handleChangeInitDate}
@@ -91,7 +91,7 @@ function EducationForm (): any {
                     />
                 </div>
                 <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl'>Fecha de finalización</FormLabel>
+                    <FormLabel className='font-sans text-xl'>Finish date</FormLabel>
                     <DatePicker
                         options={optionsFinishDate}
                         onChange={handleChangeFinishDate}
@@ -103,7 +103,7 @@ function EducationForm (): any {
             </section>
             <section className='flex flex-wrap max-w-4xl'>
                 <div className='flex flex-col max-w-4xl'>
-                    <FormLabel className='font-sans text-xl m-3'>Describe las responsabilidades del cargo, logros, metas y premios</FormLabel>
+                    <FormLabel className='font-sans text-xl m-3'>Describe your knowledge</FormLabel>
                     <Textarea
                         onChange={(event) => { setDescription(event.target.value) }}
                         height={'200px'}
@@ -114,7 +114,7 @@ function EducationForm (): any {
                 </div>
             </section>
             <div className='flex flex-wrap'>
-                {name && title && description && initialDate && finishDate && (
+                {name && title && description.length > 100 && initialDate && finishDate && (
                     <div className='w-60 m-3 add-button'>
                         <AddSectionButton
                             classList="w-60 rounded-xl justify-center font-sans text-xl text-white bg-blue-600 hover:bg-blue-500 border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"

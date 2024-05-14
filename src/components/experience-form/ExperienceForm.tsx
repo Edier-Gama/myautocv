@@ -48,19 +48,19 @@ function ExperienceForm (): any {
   }
   const minCaracteres = 160
   return (
-    <section className='justify-center flex m-auto flex-col relative top-96 mt max-w-4xl flex-wrap' id='add-experience-form'>
+    <section className='justify-center flex m-auto flex-col relative top-20 mt max-w-4xl flex-wrap' id='add-experience-form'>
         <div className='flex items-center m-3 mb-10'>
            {experienceIcon}
-           <h2 className='text-3xl font-sans font-bold p-3'>Experiencia Laboral</h2>
+           <h2 className='text-3xl font-sans font-bold p-3'>Work Experience</h2>
         </div>
     <div className='flex flex-wrap flex-col'>
       <div className='flex flex-col max-w-4xl'>
         <Experience/>
       </div>
         {!hasExperience && (
-        <div className='m-3 w-60 add-experience-button mt-10'>
+        <div className='m-3 w-60 add-experience-button'>
           <ButtonWithLogo
-              text='Añadir experiencia'
+              text='Add experience'
               callback={toggleExperience}
               callBackData={setHasExperience}
             />
@@ -71,25 +71,25 @@ function ExperienceForm (): any {
               <section id='add-experience'>
                   <section className='flex flex-wrap mt-10'>
                     <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl m-3'>Nombre de la empresa</FormLabel>
+                    <FormLabel className='font-sans text-xl m-3'>Company name</FormLabel>
                     <Input
                       height={'50px'} fontSize={'17px'}
                       onChange={(event) => { setCompany(event.target.value) }}
                       type="text"
-                      placeholder='Empresa'
+                      placeholder='Starbucks'
                       className='rounded'/>
                     </div>
                     <div className='flex flex-col w-96 m-3 '>
-                    <FormLabel className='font-sans text-xl m-3'>Cargo</FormLabel>
+                    <FormLabel className='font-sans text-xl m-3'>Charge</FormLabel>
                     <Input
                       height={'50px'} fontSize={'17px'}
                       onChange={(event) => { setCharge(event.target.value) }}
                       type="text"
-                      placeholder='Cargo'
+                      placeholder='Tech leader engineer'
                       className='rounded'/>
                     </div>
                     <div className='flex flex-col w-96 m-3 '>
-                        <FormLabel className='font-sans text-xl'>Fecha de Inicio</FormLabel>
+                        <FormLabel className='font-sans text-xl'>Start date</FormLabel>
                         <Datepicker
                            options={optionsInitialDate}
                            onChange={handleChangeInitDate}
@@ -99,7 +99,7 @@ function ExperienceForm (): any {
                         />
                     </div>
                     <div className='flex flex-col w-96 m-3 '>
-                        <FormLabel className='font-sans text-xl'>Fecha de finalización</FormLabel>
+                        <FormLabel className='font-sans text-xl'>Finish date</FormLabel>
                         <Datepicker
                            options={optionsFinishDate}
                            onChange={handleChangeFinishDate}
@@ -111,7 +111,7 @@ function ExperienceForm (): any {
                   </section>
                   <section className='flex flex-wrap max-w-4xl'>
                   <div className='flex flex-col max-w-4xl'>
-                  <FormLabel className='font-sans text-xl m-3'>Describe las responsabilidades del cargo, logros, metas y premios</FormLabel>
+                  <FormLabel className='font-sans text-xl m-3'>Describe a little this job</FormLabel>
                   <Textarea
                       minLength={87}
                       onChange={(event) => { setJobDescription(event.target.value) }}
@@ -124,7 +124,7 @@ function ExperienceForm (): any {
                   </section>
                   <div className='flex flex-wrap'>
                     {
-                      company && charge && jobDescription.length > 160 && initialDate && finishDate && (
+                      company && charge && jobDescription.length > 100 && initialDate && finishDate && (
                          <div className='w-60 m-3 add-button'>
                            <AddSectionButton
                              classList="w-60 rounded-xl justify-center font-sans text-xl text-white bg-blue-600 hover:bg-blue-500

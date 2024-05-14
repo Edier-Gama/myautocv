@@ -30,12 +30,12 @@ function AvatarComponent ({ user, data, avatar }: any) {
          {avatar !== undefined && (
             <div>
               {
-              <MenuItem className='font-sans font-semibold'>Hola, {user?.user.user_metadata.name}</MenuItem>
+              <MenuItem className='font-sans font-semibold'>Hi, {user?.user.user_metadata.name}</MenuItem>
               }
               <MenuItem>Settings</MenuItem>
               <MenuItem
                 onClick={() => { signOut() }}
-                className='font-sans'>Cerrar sesión
+                className='font-sans'>Sign Out
               </MenuItem>
             </div>
          )}
@@ -46,14 +46,14 @@ function AvatarComponent ({ user, data, avatar }: any) {
               className='font-sans bg-white'
             >
               {linkedinLogo}
-              Iniciar con LinkedIn
+              SignIn with LinkedIn
             </MenuItem>
             <MenuItem
               onClick={async () => { await SignInWithGoogle() }}
               className='font-sans bg-white'
             >
               {googleLogo}
-              Iniciar con Google
+              SignIn with Google
             </MenuItem>
           </div>
          )}

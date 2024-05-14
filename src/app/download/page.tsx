@@ -23,8 +23,8 @@ export default function Download () {
   return (
     <>
       <div className='flex flex-col justify-center items-center mt-52 m-3 mb-96 pb-96'>
-        <h2 className="text-4xl font-sans font-bold text-center">Gracias por usar MyAutoCV ✨</h2>
-        <p className="text-xl mt-5 text-center">Tu CV <b>se está descargando</b> en estos momentos 🌸</p>
+        <h2 className="text-4xl font-sans font-bold text-center">Thanks for using MyAutoCV ✨</h2>
+        <p className="text-xl mt-5 text-center">Your resume <b>is alrealy downloading</b> at this moment 🌸</p>
       </div>
       <div className='mb-96 pb-96'>
       </div>

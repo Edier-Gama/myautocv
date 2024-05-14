@@ -20,7 +20,7 @@ function HeaderInfoForm (): any {
   const [phone, setPhone]: any = useState()
   const [linkedin, setLinkedin]: any = useState()
   const [ubication, setUbication]: any = useState()
-  const [description, setDescription]: any = useState()
+  const [description, setDescription]: any = useState('')
 
   const [hasBasicInfo, setHasBasicInfo]: any = useState(null)
 
@@ -28,18 +28,18 @@ function HeaderInfoForm (): any {
     <>
       {
         userInfo && (
-          <section className='relative max-w-4xl m-auto top-80 flex flex-col justify-center'>
+          <section className='relative max-w-4xl m-auto top-10 flex flex-col justify-center'>
             <HeaderInfo/>
           </section>
         )
       }
       {
         !userInfo && (
-        <section className='relative max-w-4xl m-auto top-80 flex flex-col justify-center' id='header-form'>
-            <h1 className="text-3xl font-semibold m-3 text-left">Información base</h1>
+        <section className='relative max-w-4xl m-auto top-10 flex flex-col justify-center' id='header-form'>
+            <h1 className="text-3xl font-semibold m-3 text-left">Basic information</h1>
             <div className='flex flex-wrap'>
               <div className='flex flex-col m-3 w-96'>
-                <FormLabel className='font-sans text-xl'>Nombre completo</FormLabel>
+                <FormLabel className='font-sans text-xl'>Full name</FormLabel>
                 <Input
                   onChange={(event) => { setName(event.target.value) }}
                   type="text"
@@ -59,38 +59,38 @@ function HeaderInfoForm (): any {
                  />
               </div>
               <div className='flex flex-col m-3 w-96'>
-                <FormLabel className='font-sans text-xl'>Titular</FormLabel>
+                <FormLabel className='font-sans text-xl'>Title</FormLabel>
                 <Input
                   onChange={(event) => { setProfession(event.target.value) }}
                   type="text"
-                  placeholder='Product Manager con 2 años de experiencia'
+                  placeholder='Product Manager'
                   className='rounded'
                   height={'50px'} fontSize={'17px'}
                 />
               </div>
               <div className='m-3 w-96' >
-              <FormLabel className='font-sans text-xl'>Número de celular</FormLabel>
+              <FormLabel className='font-sans text-xl'>Phone</FormLabel>
                  <Input
                    placeholder='3227657039'
                    onChange={(event) => { setPhone(event.target.value) }}
                    height={'50px'} fontSize={'17px'}/>
               </div>
               <div className='mt-3 m-3 w-96'>
-              <FormLabel className='font-sans text-xl'>LinkedIn</FormLabel>
+              <FormLabel className='font-sans text-xl'>LinkedIn - optional</FormLabel>
                  <Input
-                   placeholder='Usuario de LinkedIn'
+                   placeholder='ediergama'
                    onChange={(event) => { setLinkedin(event.target.value) }}
                    height={'50px'} fontSize={'17px'}/>
               </div>
               <div className='mt-3 m-3 w-96'>
-              <FormLabel className='font-sans text-xl'>Ubicación</FormLabel>
+              <FormLabel className='font-sans text-xl'>Country</FormLabel>
                  <Input
-                   placeholder='Bogotá, Colombia'
+                   placeholder='USA, Mexico, Colombia, España'
                    onChange={(event) => { setUbication(event.target.value) }}
                    height={'50px'} fontSize={'17px'}/>
               </div>
                 <div className='flex flex-col max-w-4xl'>
-                  <FormLabel className='font-sans text-xl m-3'>Describe tu perfil personal y profesional</FormLabel>
+                  <FormLabel className='font-sans text-xl m-3'>Describe yourself - min 160 characters</FormLabel>
                   <Textarea
                       onChange={(event) => { setDescription(event.target.value) }}
                       height={'200px'}
@@ -102,7 +102,7 @@ function HeaderInfoForm (): any {
             </div>
             {
               // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-              name && email && profession && description && (
+              name && email && profession && description.length > 100 && (
                 <AddSectionButton
                   classList="m-3 mt-10 w-60 rounded-xl justify-center font-sans text-sm text-white bg-blue-600 hover:bg-blue-500
                   border border-gray-400 font-medium px-5 py-2.5 text-center inline-flex items-center"
